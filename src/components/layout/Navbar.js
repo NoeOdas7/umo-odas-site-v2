@@ -25,6 +25,7 @@ export default function Navbar() {
     { label: 'Programmes', href: '/programme' },
     { label: 'Cohortes',   href: '/cohortes' },
     { label: 'Contacts',   href: '/contact' },
+    { label: 'Charte UMO', href: '/charte-umo' },
   ]
 
   const navLinksConnected = [
