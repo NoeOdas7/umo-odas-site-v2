@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronDown, ChevronUp } from 'lucide-react'
 
 function useInView() {
   const ref = useRef(null)
@@ -74,7 +73,6 @@ const sections = [
 ]
 
 function SectionCard({ s, delay = 0 }) {
-  const [open, setOpen] = useState(true)
   const [ref, inView] = useInView()
   return (
     <div ref={ref} className="rounded-3xl overflow-hidden transition-all duration-700"
@@ -85,29 +83,19 @@ function SectionCard({ s, delay = 0 }) {
         transform: inView ? 'translateY(0)' : 'translateY(28px)',
         transitionDelay: `${delay}ms`,
       }}>
-      {/* Header cliquable */}
-      <button onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center gap-4 px-6 py-5 text-left"
-        style={{ background: s.color }}>
-        {/* Numéro romain */}
+      {/* Header coloré plat */}
+      <div className="flex items-center gap-4 px-6 py-5" style={{ background: s.color }}>
         <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
           <span className="font-heading font-black text-white text-sm">{s.num}</span>
         </div>
         <h3 className="font-heading font-black text-white text-lg flex-1 leading-tight">{s.titre}</h3>
-        {/* Picto déco */}
         <Image src={s.picto} alt="" width={28} height={28} className="object-contain flex-shrink-0 opacity-50" />
-        {open
-          ? <ChevronUp className="w-5 h-5 text-white/70 flex-shrink-0" />
-          : <ChevronDown className="w-5 h-5 text-white/70 flex-shrink-0" />}
-      </button>
-
-      {/* Contenu */}
-      <div className={`overflow-hidden transition-all duration-500 ${open ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}
-        style={{ background: s.colorLight }}>
-        <ul className="px-6 py-6 space-y-4">
+      </div>
+      {/* Contenu toujours visible */}
+      <div style={{ background: s.colorLight }}>
+        <ul className="px-6 py-5 space-y-4">
           {s.items.map((item, j) => (
             <li key={j} className="flex items-start gap-3.5">
-              {/* Icône picto */}
               <div className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
                 style={{ background: `${s.color}18` }}>
                 <Image src={item.icon} alt="" width={18} height={18} className="object-contain"
@@ -161,7 +149,16 @@ export default function CharteUMOPage() {
           <span style={{ fontSize: '95px', color: '#321b45', lineHeight: 1 }}>♀</span>
         </div>
 
+        {/* Picto-03 déco bas-droite */}
+        <div className="absolute bottom-0 right-0 pointer-events-none opacity-80" style={{ width: '180px' }}>
+          <Image src="/pictos/picto-03.png" alt="" width={180} height={220} className="object-contain" />
+        </div>
+
         <div className={`section-container text-center relative z-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* Picto-22 handshake centré dans le hero */}
+          <div className="flex justify-center mb-5">
+            <Image src="/pictos/picto-22.png" alt="" width={160} height={90} className="object-contain" />
+          </div>
           <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full mb-5 text-xs font-heading font-bold tracking-widest uppercase"
             style={{ background: 'rgba(213,179,253,0.28)', color: '#622ed1' }}>
             <span>♀</span> Engagement
@@ -180,7 +177,11 @@ export default function CharteUMOPage() {
         </div>
       </section>
 
-      <GenderDivider />
+      {/* Bande déco picto-10 */}
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+      </div>
 
       {/* ══ PRÉAMBULE ══ */}
       <section className="bg-white py-12">
@@ -231,7 +232,11 @@ export default function CharteUMOPage() {
         </div>
       </section>
 
-      <GenderDivider />
+      {/* Bande déco picto-10 */}
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+      </div>
 
       {/* ══ IV DISPOSITIONS FINALES ══ */}
       <section className="bg-white py-8">
@@ -294,7 +299,11 @@ export default function CharteUMOPage() {
         </div>
       </section>
 
-      <GenderDivider />
+      {/* Bande déco picto-10 */}
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+      </div>
 
       {/* ══ CTA ══ */}
       <section className="bg-white py-10 md:py-16 text-center relative overflow-hidden">

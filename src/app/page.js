@@ -122,6 +122,11 @@ export default function HomePage() {
           <Image src="/pictos/picto-19.png" alt="" width={60} height={70} className="object-contain"/>
         </div>
 
+        {/* Picto-03 : fleur teal + cercle violet + feuilles jaunes — coin bas-droite */}
+        <div className="absolute pointer-events-none" style={{bottom:0, right:0, width:'220px', opacity:0.85}}>
+          <Image src="/pictos/picto-03.png" alt="" width={220} height={220} className="object-contain"/>
+        </div>
+
         <div className="section-container w-full py-8 md:py-10 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
@@ -178,6 +183,9 @@ export default function HomePage() {
                   style={{filter:'drop-shadow(0 20px 40px rgba(98,46,209,0.25))'}}/>
               </div>
 
+              {/* Trait teal décoratif — visible dans la maquette */}
+              <div className="absolute bottom-8 left-0 right-0 pointer-events-none" style={{height:'6px', background:'#34b7ad', borderRadius:'4px', opacity:0.7, zIndex:3}}/>
+
               {/* Stats flottantes — desktop uniquement */}
               {[
                 {val:'+200', lbl:'Participants',       pos:{top:'6px',  left:'0'}},
@@ -198,6 +206,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Bande décorative picto-10 — séparateur après hero */}
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{height:'44px', objectPosition:'center'}} unoptimized />
+      </div>
 
       {/* ════ FEATURES ════ */}
       <section ref={featRef} className="relative bg-white py-12 md:py-20 overflow-hidden">
