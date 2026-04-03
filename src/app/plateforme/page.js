@@ -19,7 +19,7 @@ export default function PlatformePage() {
   return (
     <>
       {/* ══ HERO ══ */}
-      <section className="relative overflow-hidden" style={{ minHeight: '100svh', background: 'linear-gradient(135deg, #321b45 0%, #622ed1 55%, #4a20a8 100%)' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: '100svh', background: '#321b45' }}>
 
         {/* Déco fond animée */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -76,8 +76,7 @@ export default function PlatformePage() {
             <div className={`text-center mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex justify-center mb-6">
                 <Image src="/logo-umo.png" alt="UMO ODAS" width={160} height={54}
-                  className="h-14 w-auto object-contain"
-                  style={{ filter: 'brightness(0) invert(1)' }} />
+                  className="h-14 w-auto object-contain" />
               </div>
               <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full mb-4 text-xs font-heading font-bold tracking-widest uppercase"
                 style={{ background: 'rgba(236,201,47,0.18)', color: '#ecc92f', border: '1px solid rgba(236,201,47,0.35)' }}>

@@ -86,7 +86,7 @@ export default function AdminPage() {
   // ══ LOGIN PAGE ══════════════════════════════════════════════════════════
   if (!auth) return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #321b45 0%, #622ed1 60%, #4a20a8 100%)' }}>
+      style={{ background: '#321b45' }}>
 
       {/* Déco fond */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -114,8 +114,7 @@ export default function AdminPage() {
         <div className="text-center mb-8">
           <div className="flex justify-center mb-5">
             <Image src="/logo-umo.png" alt="UMO ODAS" width={140} height={48}
-              className="h-12 w-auto object-contain"
-              style={{ filter: 'brightness(0) invert(1)' }} />
+              className="h-12 w-auto object-contain" />
           </div>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-3 text-xs font-heading font-bold"
             style={{ background: 'rgba(236,201,47,0.18)', color: '#ecc92f', border: '1px solid rgba(236,201,47,0.35)' }}>
@@ -187,8 +186,7 @@ export default function AdminPage() {
         style={{ background: 'linear-gradient(90deg, #321b45 0%, #622ed1 100%)', boxShadow: '0 2px 20px rgba(50,27,69,0.4)' }}>
         <div className="flex items-center gap-3">
           <Image src="/logo-umo.png" alt="UMO" width={100} height={34}
-            className="h-8 w-auto object-contain"
-            style={{ filter: 'brightness(0) invert(1)' }} />
+            className="h-8 w-auto object-contain" />
           <div className="h-5 w-px bg-white/20 hidden sm:block" />
           <div className="hidden sm:block">
             <p className="font-heading font-black text-white text-sm leading-none">Admin</p>
