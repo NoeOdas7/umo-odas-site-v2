@@ -1,8 +1,6 @@
-import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 import pool from '@/lib/db'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+import { sendEmail } from '@/lib/mailer'
 
 export async function POST(request) {
   try {
@@ -25,19 +23,50 @@ export async function POST(request) {
     }
 
     // ÉTAPE 2 — Email à l'équipe ODAS
-    await resend.emails.send({
-      from: 'UMO ODAS Site <noreply@umo-centre-odas.org>',
-      to: [process.env.CONTACT_EMAIL || 'umo@centre-odas.org'],
+    await sendEmail({
+      from: '"UMO ODAS" <noreply@umo-centre-odas.org>',
+      to: process.env.CONTACT_EMAIL,
       subject: `Nouvelle candidature — ${prenom} ${nom} (${pays})`,
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;"><div style="background:linear-gradient(135deg,#37029D,#2129BF);padding:30px;border-radius:12px 12px 0 0;text-align:center;"><h1 style="color:white;margin:0;">Nouvelle Candidature UMO</h1><p style="color:rgba(255,255,255,0.75);margin:8px 0 0;">Cohorte 4 (2025)</p></div><div style="background:white;padding:30px;border:1px solid #E8EAFF;"><p><strong>Nom :</strong> ${prenom} ${nom}</p><p><strong>Email :</strong> ${email}</p><p><strong>Téléphone :</strong> ${telephone || 'N/A'}</p><p><strong>Pays :</strong> ${pays}</p><p><strong>Organisation :</strong> ${organisation || 'N/A'}</p><p><strong>Source :</strong> ${comment || 'N/A'}</p><hr style="border:1px solid #E8EAFF;"><p><strong>Motivation :</strong></p><div style="background:#F8F8FF;border-left:4px solid #2129BF;padding:16px;white-space:pre-wrap;">${motivation}</div><div style="text-align:center;margin-top:24px;"><a href="mailto:${email}" style="background:#2129BF;color:white;padding:12px 28px;border-radius:25px;text-decoration:none;font-weight:bold;">Répondre à ${prenom}</a></div></div></div>`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+        <div style="background:linear-gradient(135deg,#37029D,#2129BF);padding:30px;border-radius:12px 12px 0 0;text-align:center;">
+          <h1 style="color:white;margin:0;">Nouvelle Candidature UMO</h1>
+          <p style="color:rgba(255,255,255,0.75);margin:8px 0 0;">Cohorte 4 (2025)</p>
+        </div>
+        <div style="background:white;padding:30px;border:1px solid #E8EAFF;">
+          <p><strong>Nom :</strong> ${prenom} ${nom}</p>
+          <p><strong>Email :</strong> ${email}</p>
+          <p><strong>Téléphone :</strong> ${telephone || 'N/A'}</p>
+          <p><strong>Pays :</strong> ${pays}</p>
+          <p><strong>Organisation :</strong> ${organisation || 'N/A'}</p>
+          <p><strong>Source :</strong> ${comment || 'N/A'}</p>
+          <hr style="border:1px solid #E8EAFF;">
+          <p><strong>Motivation :</strong></p>
+          <div style="background:#F8F8FF;border-left:4px solid #2129BF;padding:16px;white-space:pre-wrap;">${motivation}</div>
+          <div style="text-align:center;margin-top:24px;">
+            <a href="mailto:${email}" style="background:#2129BF;color:white;padding:12px 28px;border-radius:25px;text-decoration:none;font-weight:bold;">Répondre à ${prenom}</a>
+          </div>
+        </div>
+      </div>`,
     })
 
     // ÉTAPE 3 — Confirmation au candidat
-    await resend.emails.send({
-      from: 'Université Militante ODAS <noreply@umo-centre-odas.org>',
-      to: [email],
+    await sendEmail({
+      from: '"Université Militante ODAS" <noreply@umo-centre-odas.org>',
+      to: email,
       subject: `Candidature reçue — Université Militante ODAS`,
-      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;"><div style="background:linear-gradient(135deg,#37029D,#2129BF);padding:40px 30px;border-radius:12px 12px 0 0;text-align:center;"><div style="font-size:48px;">✅</div><h1 style="color:white;margin:10px 0 0;">Candidature bien reçue !</h1><p style="color:rgba(255,255,255,0.75);margin:10px 0 0;">Merci ${prenom} !</p></div><div style="background:white;padding:36px 30px;border:1px solid #E8EAFF;border-radius:0 0 12px 12px;"><p style="color:#444;">Bonjour <strong style="color:#2129BF">${prenom} ${nom}</strong>,</p><p style="color:#444;">Nous avons bien reçu votre candidature pour la <strong>Cohorte 4 (2025)</strong>. Notre équipe vous répondra sous <strong>5 jours ouvrables</strong> à l'adresse <strong>${email}</strong>.</p><p style="color:#444;">Pour toute question : <a href="mailto:contact@centre-odas.org" style="color:#2129BF;">contact@centre-odas.org</a></p><p style="color:#444;">Chaleureusement,<br><strong style="color:#2129BF">L'équipe UMO ODAS</strong></p></div></div>`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+        <div style="background:linear-gradient(135deg,#37029D,#2129BF);padding:40px 30px;border-radius:12px 12px 0 0;text-align:center;">
+          <div style="font-size:48px;">✅</div>
+          <h1 style="color:white;margin:10px 0 0;">Candidature bien reçue !</h1>
+          <p style="color:rgba(255,255,255,0.75);margin:10px 0 0;">Merci ${prenom} !</p>
+        </div>
+        <div style="background:white;padding:36px 30px;border:1px solid #E8EAFF;border-radius:0 0 12px 12px;">
+          <p>Bonjour <strong style="color:#2129BF">${prenom} ${nom}</strong>,</p>
+          <p>Nous avons bien reçu votre candidature pour la <strong>Cohorte 4 (2025)</strong>. Notre équipe vous répondra sous <strong>5 jours ouvrables</strong> à l'adresse <strong>${email}</strong>.</p>
+          <p>Pour toute question : <a href="mailto:umo@umo-centre-odas.org" style="color:#2129BF;">umo@umo-centre-odas.org</a></p>
+          <p>Chaleureusement,<br><strong style="color:#2129BF">L'équipe UMO ODAS</strong></p>
+        </div>
+      </div>`,
     })
 
     return NextResponse.json({ success: true })
