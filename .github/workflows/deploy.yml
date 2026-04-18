@@ -20,7 +20,7 @@ jobs:
             export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
             cd /var/www/umo-odas
             git pull origin main
-            npm install --production
+            npm install
             npm run build
             pm2 restart umo-odas
             echo "Deploiement termine !"
