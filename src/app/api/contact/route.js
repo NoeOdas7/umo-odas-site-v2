@@ -10,7 +10,7 @@ export async function POST(request) {
     }
 
     await sendEmail({
-      from: '"UMO ODAS Contact" <noreply@umo-centre-odas.org>',
+      from: '"UMO ODAS Contact" <noreply@centre-odas.io>',
       to: process.env.CONTACT_EMAIL,
       subject: `📩 Contact site UMO — ${sujet}`,
       html: `<div style="font-family:Arial,sans-serif;max-width:500px;margin:0 auto;">

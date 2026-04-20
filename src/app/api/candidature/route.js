@@ -24,7 +24,7 @@ export async function POST(request) {
 
     // ÉTAPE 2 — Email à l'équipe ODAS
     await sendEmail({
-      from: '"UMO ODAS" <noreply@umo-centre-odas.org>',
+      from: '"UMO ODAS" <noreply@centre-odas.io>',
       to: process.env.CONTACT_EMAIL,
       subject: `Nouvelle candidature — ${prenom} ${nom} (${pays})`,
       html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
@@ -51,7 +51,7 @@ export async function POST(request) {
 
     // ÉTAPE 3 — Confirmation au candidat
     await sendEmail({
-      from: '"Université Militante ODAS" <noreply@umo-centre-odas.org>',
+      from: '"Université Militante ODAS" <noreply@centre-odas.io>',
       to: email,
       subject: `Candidature reçue — Université Militante ODAS`,
       html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
@@ -63,7 +63,7 @@ export async function POST(request) {
         <div style="background:white;padding:36px 30px;border:1px solid #E8EAFF;border-radius:0 0 12px 12px;">
           <p>Bonjour <strong style="color:#2129BF">${prenom} ${nom}</strong>,</p>
           <p>Nous avons bien reçu votre candidature pour la <strong>Cohorte 4 (2025)</strong>. Notre équipe vous répondra sous <strong>5 jours ouvrables</strong> à l'adresse <strong>${email}</strong>.</p>
-          <p>Pour toute question : <a href="mailto:umo@umo-centre-odas.org" style="color:#2129BF;">umo@umo-centre-odas.org</a></p>
+          <p>Pour toute question : <a href="mailto:umo@centre-odas.io" style="color:#2129BF;">umo@centre-odas.io</a></p>
           <p>Chaleureusement,<br><strong style="color:#2129BF">L'équipe UMO ODAS</strong></p>
         </div>
       </div>`,

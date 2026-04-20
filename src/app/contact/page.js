@@ -166,8 +166,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-xs font-heading font-bold uppercase tracking-wider mb-0.5" style={{ color: '#622ed1', opacity: 0.6 }}>Email</div>
-                  <a href="mailto:umo@centre-odas.org" className="font-heading font-bold text-sm hover:underline" style={{ color: '#622ed1' }}>
-                    umo@centre-odas.org
+                  <a href="mailto:umo@centre-odas.io" className="font-heading font-bold text-sm hover:underline" style={{ color: '#622ed1' }}>
+                    umo@centre-odas.io
                   </a>
                 </div>
               </div>

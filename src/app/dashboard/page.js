@@ -283,7 +283,7 @@ export default function DashboardPage() {
               <Image src="/logo-umo.png" alt="Logo UMO" width={140} height={48} className="h-11 w-auto object-contain mb-4" />
               <p className="text-white/55 text-sm leading-relaxed mb-4 max-w-xs">Un programme de renforcement de capacités 100% en ligne.</p>
               <div className="space-y-1.5">
-                <div className="flex items-center gap-2 text-white/50 text-sm"><span className="text-umo-yellow">✉</span><span>umo@centre-odas.org</span></div>
+                <div className="flex items-center gap-2 text-white/50 text-sm"><span className="text-umo-yellow">✉</span><span>umo@centre-odas.io</span></div>
                 <div className="flex items-center gap-2 text-white/50 text-sm"><span className="text-umo-yellow">📍</span><span>Abidjan, Côte d&apos;Ivoire</span></div>
               </div>
             </div>

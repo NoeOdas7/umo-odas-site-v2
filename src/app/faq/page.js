@@ -19,7 +19,7 @@ const faqs = [
   { q: 'Vais-je recevoir une attestation à la fin ?',
     a: 'Oui ! Les participant·es qui complètent le parcours reçoivent une attestation officielle du Centre ODAS, ainsi que des badges numériques par module réussi.' },
   { q: 'Comment puis-je récupérer mes accès si je les ai perdus ?',
-    a: 'Utilisez la fonction "Mot de passe oublié" sur la plateforme Moodle. Si le problème persiste, contactez-nous à umo@centre-odas.org.' },
+    a: 'Utilisez la fonction "Mot de passe oublié" sur la plateforme Moodle. Si le problème persiste, contactez-nous à umo@centre-odas.io.' },
 ]
 
 function FaqItem({ faq, index }) {

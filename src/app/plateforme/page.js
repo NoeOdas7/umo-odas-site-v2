@@ -164,10 +164,10 @@ export default function PlatformePage() {
                   ))}
                 </ul>
                 <div className="mt-5 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                  <a href="mailto:umo@centre-odas.org"
+                  <a href="mailto:umo@centre-odas.io"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-heading font-bold transition-all duration-200"
                     style={{ background: 'rgba(52,183,173,0.15)', color: '#34b7ad', border: '1.5px solid rgba(52,183,173,0.35)' }}>
-                    <Mail className="w-4 h-4" /> umo@centre-odas.org
+                    <Mail className="w-4 h-4" /> umo@centre-odas.io
                   </a>
                   <Link href="/candidature"
                     className="text-white/45 hover:text-white text-xs font-heading transition-colors">
