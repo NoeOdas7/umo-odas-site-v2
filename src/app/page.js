@@ -19,11 +19,11 @@ function useInView(opts = {}) {
   return [ref, inView]
 }
 
-/* ── Séparateur ♀♂ — picto-20.png ── */
+/* ── Séparateur ♀♂ — picto-10.png ── */
 function GenderDivider() {
   return (
     <div className="overflow-hidden select-none bg-white py-1">
-      <Image src="/pictos/picto-20.png" alt="" width={1500} height={60}
+      <Image src="/pictos/picto-10.png" alt="" width={1500} height={60}
         className="w-full object-cover" style={{height:'32px', objectPosition:'center'}}/>
     </div>
   )
