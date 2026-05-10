@@ -180,8 +180,9 @@ export default function CharteUMOPage() {
       {/* Bande déco picto-10 */}
       <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
+      <div />
 
       {/* ══ PRÉAMBULE ══ */}
       <section className="bg-white py-12">
@@ -235,8 +236,9 @@ export default function CharteUMOPage() {
       {/* Bande déco picto-10 */}
       <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
+      <div />
 
       {/* ══ IV DISPOSITIONS FINALES ══ */}
       <section className="bg-white py-8">
@@ -302,32 +304,10 @@ export default function CharteUMOPage() {
       {/* Bande déco picto-10 */}
       <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
+      <div />
 
-      {/* ══ CTA ══ */}
-      <section className="bg-white py-10 md:py-16 text-center relative overflow-hidden">
-        <div className="absolute left-10 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
-          <Image src="/pictos/picto-04.png" alt="" width={58} height={58} className="object-contain" />
-        </div>
-        <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
-          <Image src="/pictos/picto-07.png" alt="" width={52} height={52} className="object-contain" />
-        </div>
-        <div className="section-container fade-up">
-          <h2 className="font-heading font-black mb-3"
-            style={{ fontSize: 'clamp(2rem,4vw,3rem)', lineHeight: 1.15, color: '#622ed1' }}>
-            Inscrivez-vous à<br />notre prochaine Cohorte
-          </h2>
-          <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto">
-            Les candidatures pour la cohorte 2 sont ouvertes jusqu&apos;à épuisement des places.
-          </p>
-          <Link href="/candidature"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-heading font-bold text-base transition-all duration-300 hover:-translate-y-1"
-            style={{ background: '#ecc92f', color: '#321b45', boxShadow: '0 6px 20px rgba(236,201,47,.4)' }}>
-            Candidatez ——→
-          </Link>
-        </div>
-      </section>
     </>
   )
 }
