@@ -9,36 +9,25 @@ import { useAuth } from '@/lib/auth-context'
 /* ── Données cohortes ── */
 const cohortes = [
   {
-    num: 3,
-    annee: '2026',
-    titre: 'Focus sur le plaidoyer digital et la mobilisation en ligne.',
-    desc: 'Chaque module dure environ 2 semaines et combine lectures, vidéos, exercices et échanges.',
-    status: 'En cours',
-    bg: '#321b45',
-    textColor: 'white',
-    image: '/hero-woman.jpg',
-  },
-  {
     num: 2,
     annee: '2025',
-    titre: 'Renforcement des capacités en communication et storytelling.',
-    desc: 'Chaque module dure environ 2 semaines et combine lectures, vidéos, exercices et échanges.',
-    status: 'En cours',
+    titre: "Recherche et Gestion des Connaissances sur l'Avortement Sécurisé",
+    desc: "La cohorte 2 adopte une approche centrée sur l'utilisateur.rice, inclusive, intersectionnelle et académique.",
     bg: '#34b7ad',
     textColor: 'white',
     imageBg: '#2a9d8f',
-    imageText: 'sto·ry\n·tel·ling',
+    imageText: 'Cohorte 2',
   },
   {
     num: 1,
     annee: '2025',
-    titre: 'La première cohorte à poser les bases du militantisme informé.',
-    desc: 'Chaque module dure environ 2 semaines et combine lectures, vidéos, exercices et échanges.',
+    titre: 'Avortement sécurisé et continuum des DSSR',
+    desc: 'La première édition (mai-juillet 2025) a mobilisé 230 participant-es de 17 pays et 21 coachs de 8 pays.',
     status: 'Terminé',
     bg: '#ecc92f',
     textColor: '#321b45',
     imageBg: '#d4a017',
-    imageText: 'mili\n·tan·tis·me',
+    imageText: 'Cohorte 1',
   },
 ]
 
@@ -100,8 +89,10 @@ function NotConnectedView() {
             <Image src="/pictos/picto-07.png" alt="" width={58} height={58} className="object-contain" />
           </div>
           <div className="absolute right-16 top-14 opacity-35">
-            <div style={{ width: '48px', height: '48px', background: '#ecc92f',
-              clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)' }} />
+            <div style={{
+              width: '48px', height: '48px', background: '#ecc92f',
+              clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'
+            }} />
           </div>
         </div>
         <div className="relative section-container text-center text-white" style={{ paddingTop: 'clamp(90px, 18vw, 140px)', paddingBottom: '70px' }}>
@@ -110,10 +101,10 @@ function NotConnectedView() {
             <span>♀</span> Formation
           </div>
           <h1 className="font-heading font-black text-white" style={{ fontSize: 'clamp(2.5rem,6vw,4.5rem)', lineHeight: 1.1, marginBottom: '16px' }}>
-            Nos Cohortes
+            Les Cohortes
           </h1>
           <p className="text-white/80 text-lg" style={{ maxWidth: '540px', margin: '0 auto' }}>
-            Depuis 2022, nous formons des militant·es engagé·es à travers toute l&apos;Afrique francophone.
+            UMO : Former une nouvelle génération de leaders pour l&apos;avortement sécurisé en Afrique francophone
           </p>
         </div>
       </section>
@@ -125,88 +116,55 @@ function NotConnectedView() {
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-            {/* Cohorte 3 — purple */}
-            <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              style={{ background: cohortes[0].bg }}>
-              <div className="relative" style={{ height: '190px', overflow: 'hidden' }}>
-                <Image src="/hero-woman.jpg" alt="Cohorte 3" fill className="object-cover object-top" />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 35%, rgba(50,27,69,0.65) 100%)' }} />
-              </div>
-              <div className="p-5">
-                <h3 className="font-heading font-black text-white text-base mb-2 leading-tight">{cohortes[0].titre}</h3>
-                <p className="text-white/65 text-sm mb-5 leading-relaxed">{cohortes[0].desc}</p>
-                <Link href="/programme"
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-white/55 text-white
-                             font-heading font-bold text-xs hover:bg-white hover:text-umo-dark transition-all duration-200">
-                  Lire la suite <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-
             {/* Cohorte 2 — teal */}
             <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              style={{ background: cohortes[1].bg }}>
-              <div className="relative flex items-center justify-center" style={{ height: '190px', background: cohortes[1].imageBg }}>
+              style={{ background: cohortes[0].bg }}>
+              <div className="relative flex items-center justify-center" style={{ height: '190px', background: cohortes[0].imageBg }}>
                 <div className="text-center px-6">
                   <div className="font-heading font-black text-white/90 leading-tight"
-                    style={{ fontSize: 'clamp(1.8rem,5vw,3rem)', letterSpacing: '-0.02em', lineHeight: '1.1' }}>
-                    sto·ry<br />·tel·ling
+                    style={{ fontSize: 'clamp(1.5rem,4vw,2.2rem)', letterSpacing: '-0.02em', lineHeight: '1.2' }}>
+                    2ème Cohorte<br />2025
                   </div>
                 </div>
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20" />
-                <div className="absolute bottom-3 left-4 w-5 h-5 rounded-full bg-white/15" />
               </div>
               <div className="p-5">
-                <h3 className="font-heading font-black text-white text-base mb-2 leading-tight">{cohortes[1].titre}</h3>
-                <p className="text-white/70 text-sm mb-5 leading-relaxed">{cohortes[1].desc}</p>
-                <Link href="/candidature"
+                <p className="text-white/60 text-xs font-heading font-bold mb-1">2ème Cohorte — 2025</p>
+                <h3 className="font-heading font-black text-white text-base mb-2 leading-tight">{cohortes[0].titre}</h3>
+                <p className="text-white/70 text-sm mb-5 leading-relaxed">{cohortes[0].desc}</p>
+                <Link href="/plateforme"
                   className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-white/55 text-white
                              font-heading font-bold text-xs hover:bg-white hover:text-umo-teal transition-all duration-200">
-                  Candidatez <ArrowRight className="w-3.5 h-3.5" />
+                  Se connecter <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
 
             {/* Cohorte 1 — yellow */}
             <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              style={{ background: cohortes[2].bg }}>
-              <div className="relative flex items-center justify-center" style={{ height: '190px', background: cohortes[2].imageBg }}>
+              style={{ background: cohortes[1].bg }}>
+              <div className="relative flex items-center justify-center" style={{ height: '190px', background: cohortes[1].imageBg }}>
                 <div className="text-center px-6">
                   <div className="font-heading font-black leading-tight"
-                    style={{ fontSize: 'clamp(1.8rem,5vw,3rem)', letterSpacing: '-0.02em', lineHeight: '1.1', color: 'rgba(50,27,69,0.8)' }}>
-                    mili<br />·tan·tis·me
+                    style={{ fontSize: 'clamp(1.5rem,4vw,2.2rem)', letterSpacing: '-0.02em', lineHeight: '1.2', color: 'rgba(50,27,69,0.8)' }}>
+                    1ère Cohorte<br />2025
                   </div>
                 </div>
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/30" />
-                <div className="absolute bottom-3 left-4 w-5 h-5 rounded-full bg-white/20" />
               </div>
               <div className="p-5">
-                <h3 className="font-heading font-black text-umo-dark text-base mb-2 leading-tight">{cohortes[2].titre}</h3>
-                <p className="text-umo-dark/65 text-sm mb-5 leading-relaxed">{cohortes[2].desc}</p>
-                <Link href="/candidature"
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-umo-dark/45 text-umo-dark
-                             font-heading font-bold text-xs hover:bg-umo-dark hover:text-umo-yellow transition-all duration-200">
-                  Candidatez <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                <p className="text-umo-dark/50 text-xs font-heading font-bold mb-1">1ère Cohorte — 2025</p>
+                <h3 className="font-heading font-black text-umo-dark text-base mb-2 leading-tight">{cohortes[1].titre}</h3>
+                <p className="text-umo-dark/65 text-sm mb-5 leading-relaxed">{cohortes[1].desc}</p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <Link href="https://umo.centre-odas.org/?sfwd-courses=copy-of-1ere-cohorte-avortement-securise-et-continuum-des…" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full border-2 border-umo-dark/45 text-umo-dark
+                               font-heading font-bold text-xs hover:bg-umo-dark hover:text-umo-yellow transition-all duration-200">
+                    En savoir plus <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <span className="text-xs font-heading font-bold text-umo-dark/50 px-3 py-1 rounded-full" style={{ background: 'rgba(50,27,69,0.1)' }}>
+                    Cohorte terminée
+                  </span>
+                </div>
               </div>
-            </div>
-
-            {/* CTA Prête à commencer ? */}
-            <div className="rounded-2xl p-8 flex flex-col items-center justify-center text-center"
-              style={{ background: 'white', border: '2.5px solid #f3ebff', minHeight: '300px' }}>
-              <div className="mb-4 opacity-40">
-                <Image src="/pictos/picto-05.png" alt="" width={44} height={44} className="object-contain mx-auto" />
-              </div>
-              <h2 className="font-heading font-black text-umo-purple mb-3"
-                style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', lineHeight: '1.15' }}>
-                Prête<br />à commencer&nbsp;?
-              </h2>
-              <p className="text-gray-500 text-sm mb-6 max-w-xs leading-relaxed">
-                Les candidatures pour la cohorte 2 sont ouvertes jusqu&apos;à épuisement des places.
-              </p>
-              <Link href="/candidature" className="btn-yellow-solid">
-                Candidatez <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
 
           </div>
@@ -214,9 +172,9 @@ function NotConnectedView() {
       </section>
 
       {/* Bande déco picto-10 */}
-      <div className="overflow-hidden bg-white py-3 border-t border-gray-100">
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
     </>
   )
@@ -263,7 +221,7 @@ function ConnectedView({ user }) {
                 Mes cours
               </h1>
               <p className="text-white/70 text-sm md:text-base" style={{ maxWidth: '480px' }}>
-                Depuis 2022, nous formons des militant·es engagé·es à travers toute l&apos;Afrique francophone.
+                UMO : Former une nouvelle génération de leaders pour l&apos;avortement sécurisé en Afrique francophone
               </p>
             </div>
             <div className="flex gap-3 flex-wrap">
@@ -341,8 +299,9 @@ function ConnectedView({ user }) {
       </section>
 
       {/* Bande picto-10 */}
-      <div className="overflow-hidden bg-white py-3 border-t border-gray-100">
-        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60} className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
 
       {/* CTA */}
