@@ -76,31 +76,9 @@ export default function Footer() {
       </div>
 
       {/* ── Bande pictos bas ── */}
-      <div className="py-5 border-t border-white/10">
-        <div className="flex items-center justify-center gap-6 flex-wrap px-6">
-          <Image src="/pictos/picto-05.png" alt="" width={44} height={44} className="object-contain flex-shrink-0" />
-          <span style={{ color: '#34b7ad', fontSize: '36px', fontWeight: 'bold' }}>♀</span>
-          <div style={{ width: '60px', height: '60px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.25)', flexShrink: 0 }}>
-            <Image src="/hero-man.jpg" alt="" width={60} height={60} className="w-full h-full object-cover object-top" />
-          </div>
-          <svg width="50" height="50" viewBox="0 0 100 100">
-            <path d="M50 5 C55 25, 75 20, 90 30 C75 40, 80 60, 70 75 C60 65, 40 65, 30 75 C20 60, 25 40, 10 30 C25 20, 45 25, 50 5Z" fill="#622ed1" />
-          </svg>
-          <div style={{ width: '70px', height: '70px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.25)', flexShrink: 0 }}>
-            <Image src="/hero-woman.jpg" alt="" width={70} height={70} className="w-full h-full object-cover object-top" />
-          </div>
-          <svg width="55" height="50" viewBox="0 0 100 80">
-            <path d="M50 10 A30 30 0 0 1 50 70Z" fill="#321b45" />
-            <path d="M60 10 A30 30 0 0 1 60 70Z" fill="#622ed1" />
-          </svg>
-          <Image src="/pictos/picto-07.png" alt="" width={44} height={44} className="object-contain flex-shrink-0" />
-          <Image src="/pictos/picto-19.png" alt="" width={36} height={44} className="object-contain flex-shrink-0" style={{ filter: 'brightness(0.15)' }} />
-          <div style={{ width: '60px', height: '60px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255,255,255,.25)', flexShrink: 0 }}>
-            <Image src="/hero-man.jpg" alt="" width={60} height={60} className="w-full h-full object-cover" />
-          </div>
-          <span style={{ color: '#34b7ad', fontSize: '36px', fontWeight: 'bold' }}>♀</span>
-        </div>
-      </div>
+    div className="overflow-hidden bg-white py-3 border-y border-gray-100">
+        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
 
       {/* ── Barre bas ── */}
       <div className="border-t border-white/10">
