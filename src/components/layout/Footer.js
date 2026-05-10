@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Bande pictos bas ── */}
+     {/* ── Bande pictos bas ── */}
       <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
           className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
