@@ -36,7 +36,7 @@ export default function Footer() {
       src="/pictos/Logo_UMO_blanc.png"
       alt="Logo UMO ODAS"
       width={120}
-      height={70}
+      height={90}
       className="object-contain flex-shrink-0"
     />
   </div>  
