@@ -21,18 +21,18 @@ export default function Navbar() {
   }, [])
 
   const navLinksPublic = [
-    { label: 'Accueil',    href: '/' },
+    { label: 'Accueil', href: '/' },
     { label: 'Programmes', href: '/programme' },
-    { label: 'Cohortes',   href: '/cohortes' },
-    { label: 'Contacts',   href: '/contact' },
+    { label: 'Cohortes', href: '/cohortes' },
+    { label: 'Contacts', href: '/contact' },
     { label: 'Charte UMO', href: '/charte-umo' },
   ]
 
   const navLinksConnected = [
-    { label: 'Accueil',    href: '/' },
+    { label: 'Accueil', href: '/' },
     { label: 'Programmes', href: '/programme' },
-    { label: 'Cohortes',   href: '/mes-cours' },
-    { label: 'Contacts',   href: '/contact' },
+    { label: 'Cohortes', href: '/mes-cours' },
+    { label: 'Contacts', href: '/contact' },
     { label: 'Charte UMO', href: '/charte-umo' },
   ]
 
@@ -47,26 +47,26 @@ export default function Navbar() {
   const isActive = (href) => pathname === href
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
         ? 'bg-white shadow-lg border-b border-gray-100'
         : 'bg-white/90 backdrop-blur-sm'
-    }`}>
+        }`}
+      style={{ borderRadius: '0 0 24px 24px' }}
+    >
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image
-              src="/logo-umo.png"
-              alt="Université Militante ODAS"
+              src="/pictos/LogoUMO_UMO.png"
+              alt="Logo UMO ODAS"
               width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
-              priority
+              height={60}
+              className="object-contain flex-shrink-0"
             />
           </Link>
-
           {/* Nav desktop */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -87,7 +87,6 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             {user ? (
               <>
-                {/* Avatar + nom */}
                 <div className="flex items-center gap-2 pl-2">
                   <div className="w-9 h-9 rounded-full bg-umo-purple flex items-center justify-center flex-shrink-0">
                     <span className="font-heading font-black text-white text-sm">
