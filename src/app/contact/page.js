@@ -20,9 +20,9 @@ function useInView() {
 
 function GenderDivider() {
   return (
-    <div className="overflow-hidden select-none bg-white py-1">
-      <Image src="/pictos/picto-20.png" alt="" width={1500} height={60}
-        className="w-full object-cover" style={{ height: '32px', objectPosition: 'center' }} unoptimized />
+    <div className="overflow-hidden select-none bg-white py-2">
+      <Image src="/pictos/picto-11.png" alt="" width={1500} height={88}
+        className="w-full object-cover" style={{ height: '88px', objectPosition: 'center' }} unoptimized />
     </div>
   )
 }
@@ -48,7 +48,7 @@ export default function ContactPage() {
         body: JSON.stringify(form),
       })
       if (res.ok) setSent(true)
-    } catch {}
+    } catch { }
     setLoading(false)
   }
 
@@ -120,15 +120,14 @@ export default function ContactPage() {
         <div className={`section-container text-center relative z-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block px-6 py-1.5 rounded-full mb-4 text-xs font-heading font-bold tracking-widest uppercase"
             style={{ background: 'rgba(213,179,253,0.3)', color: '#622ed1' }}>
-            ✉ Contactez-nous
+            ✉ Contacter le CoTech
           </div>
           <h1 className="font-heading font-black leading-tight mb-4">
             <span style={{ fontSize: 'clamp(2.5rem,5vw,4rem)', color: '#622ed1', display: 'block' }}>Nous</span>
             <span style={{ fontSize: 'clamp(2.5rem,5vw,4rem)', color: '#ecc92f', display: 'block' }}>contacter</span>
           </h1>
           <p className="text-gray-600 text-base leading-relaxed" style={{ maxWidth: '480px', margin: '0 auto' }}>
-            Une question sur le programme, une candidature, un partenariat ?
-            Écrivez-nous — nous répondons sous <strong>48h</strong>.
+            L&apos;équipe vous répondra très vite.
           </p>
         </div>
       </section>
@@ -166,8 +165,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="text-xs font-heading font-bold uppercase tracking-wider mb-0.5" style={{ color: '#622ed1', opacity: 0.6 }}>Email</div>
-                  <a href="mailto:umo@centre-odas.io" className="font-heading font-bold text-sm hover:underline" style={{ color: '#622ed1' }}>
-                    umo@centre-odas.io
+                  <a href="mailto:umo@centre-odas.org" className="font-heading font-bold text-sm hover:underline" style={{ color: '#622ed1' }}>
+                    umo@centre-odas.org
                   </a>
                 </div>
               </div>
