@@ -5,13 +5,11 @@ import Image from 'next/image'
 import { useAuth } from '@/lib/auth-context'
 
 /* ─── Séparateur ♀♂ ─── */
-function GenderDivider({ color = '#622ed1' }) {
+function GenderDivider() {
   return (
-    <div className="overflow-hidden py-2 select-none" style={{background:'white'}}>
-      <p className="text-center whitespace-nowrap"
-        style={{color, opacity:.3, fontSize:'13px', letterSpacing:'3px', fontFamily:'sans-serif'}}>
-        <Image src="/pictos/picto-20.png" alt="" width={1500} height={60} className="w-full object-cover" style={{height:"32px",objectPosition:"center"}} unoptimized/>
-      </p>
+    <div className="overflow-hidden select-none bg-white py-2">
+      <Image src="/pictos/picto-11.png" alt="" width={1500} height={88}
+        className="w-full object-cover" style={{ height: '88px', objectPosition: 'center' }} unoptimized />
     </div>
   )
 }
