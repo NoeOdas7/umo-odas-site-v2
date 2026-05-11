@@ -75,8 +75,7 @@ export default function PlatformePage() {
             {/* Logo + badge */}
             <div className={`text-center mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex justify-center mb-6">
-                <Image src="pictos/Logo_UMO_blanc.png" alt="UMO ODAS" width={160} height={54}
-                  className="h-14 w-auto object-contain" />
+                 <Imagesrc="/pictos/Logo_UMO_blanc.png"alt="Logo UMO ODAS"width={160}height={120}className="object-contain flex-shrink-0"/>
               </div>
               <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full mb-4 text-xs font-heading font-bold tracking-widest uppercase"
                 style={{ background: 'rgba(236,201,47,0.18)', color: '#ecc92f', border: '1px solid rgba(236,201,47,0.35)' }}>
