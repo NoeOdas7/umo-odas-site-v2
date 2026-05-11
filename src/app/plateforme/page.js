@@ -75,7 +75,7 @@ export default function PlatformePage() {
             {/* Logo + badge */}
             <div className={`text-center mb-8 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex justify-center mb-6">
-                <Image src="/logo-umo.png" alt="UMO ODAS" width={160} height={54}
+                <Image src="pictos/Logo_UMO_blanc.png" alt="UMO ODAS" width={160} height={54}
                   className="h-14 w-auto object-contain" />
               </div>
               <div className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full mb-4 text-xs font-heading font-bold tracking-widest uppercase"
@@ -164,10 +164,10 @@ export default function PlatformePage() {
                   ))}
                 </ul>
                 <div className="mt-5 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                  <a href="mailto:umo@centre-odas.io"
+                  <a href="mailto:umo@centre-odas.org"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-heading font-bold transition-all duration-200"
                     style={{ background: 'rgba(52,183,173,0.15)', color: '#34b7ad', border: '1.5px solid rgba(52,183,173,0.35)' }}>
-                    <Mail className="w-4 h-4" /> umo@centre-odas.io
+                    <Mail className="w-4 h-4" /> umo@centre-odas.org
                   </a>
                   <Link href="/candidature"
                     className="text-white/45 hover:text-white text-xs font-heading transition-colors">
@@ -188,10 +188,12 @@ export default function PlatformePage() {
       </section>
 
       {/* Bande picto-10 */}
-      <div className="overflow-hidden bg-white border-b border-gray-100">
+      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '44px', objectPosition: 'center' }} unoptimized />
+          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
+
+
 
       {/* ══ SECTION INFO COMPLÉMENTAIRE ══ */}
       <section className="py-14 md:py-20 bg-white">
