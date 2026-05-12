@@ -123,12 +123,12 @@ function NotConnectedView() {
                 <div className="text-center px-6">
                   <div className="font-heading font-black text-white/90 leading-tight"
                     style={{ fontSize: 'clamp(1.5rem,4vw,2.2rem)', letterSpacing: '-0.02em', lineHeight: '1.2' }}>
-                    2ème Cohorte<br />2025
+                    2ème Cohorte<br />2026
                   </div>
                 </div>
               </div>
               <div className="p-5">
-                <p className="text-white/60 text-xs font-heading font-bold mb-1">2ème Cohorte — 2025</p>
+                <p className="text-white/60 text-xs font-heading font-bold mb-1">2ème Cohorte — 2026</p>
                 <h3 className="font-heading font-black text-white text-base mb-2 leading-tight">{cohortes[0].titre}</h3>
                 <p className="text-white/70 text-sm mb-5 leading-relaxed">{cohortes[0].desc}</p>
                 <Link href="/plateforme"
