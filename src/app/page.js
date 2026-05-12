@@ -113,8 +113,8 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3 mb-6 lg:hidden">
                 {[
                   { val: '+200', lbl: 'Participants' },
-                  { val: '8', lbl: 'Pays engagés' },
-                  { val: '3', lbl: 'Cohortes' },
+                  { val: '17', lbl: 'Pays engagés' },
+                  { val: '2', lbl: 'Cohortes' },
                   { val: '100%', lbl: 'En ligne' },
                 ].map((s, i) => (
                   <div key={i} className="text-center px-4 py-2.5 rounded-2xl"
@@ -145,8 +145,8 @@ export default function HomePage() {
                 style={{ height: '6px', background: '#34b7ad', borderRadius: '4px', opacity: 0.7, zIndex: 3 }} />
               {[
                 { val: '+200', lbl: 'Participants', pos: { top: '6px', left: '0' } },
-                { val: '8', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
-                { val: '3', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
+                { val: '17', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
+                { val: '2', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
                 { val: '100%', lbl: 'En ligne', pos: { bottom: '60px', right: '0' } },
               ].map((s, i) => (
                 <div key={i} className="absolute text-center z-20 transition-all duration-500 hidden lg:block"
