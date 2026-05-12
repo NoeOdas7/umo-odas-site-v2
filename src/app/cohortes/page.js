@@ -10,7 +10,7 @@ import { useAuth } from '@/lib/auth-context'
 const cohortes = [
   {
     num: 2,
-    annee: '2025',
+    annee: '2026',
     titre: "Recherche et Gestion des Connaissances sur l'Avortement Sécurisé",
     desc: "La cohorte 2 adopte une approche centrée sur l'utilisateur.rice, inclusive, intersectionnelle et académique.",
     bg: '#34b7ad',
