@@ -103,7 +103,7 @@ const equipe = [
     role: 'Chargé de Communication', 
     organisation: 'Le Centre ODAS', 
     pays: '🌍 Afrique', 
-    photo: '/equipe/karnakone.png'
+    photo: '/equipe/KarnaKone.png'
   },
   { 
     nom: 'Dr Dela Nai', 
