@@ -23,7 +23,7 @@ function useInView(threshold = 0.1) {
 const getDriveUrl = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
 
 const equipe = [
-  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R/view') },
+  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R') },
   { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo: getDriveUrl('1QVNG1t26D30dUHGSSnqhB72Wgi1kHuOh') },
   { nom: 'M. Tonfack Armando', role: 'MEAL Advisor', organisation: 'Le Centre ODAS', pays: '🇨🇲 Cameroun', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7') },
   { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager', organisation: 'Africa Forward Advisory Group', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6') },
