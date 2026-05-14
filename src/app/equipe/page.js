@@ -47,7 +47,7 @@ const equipe = [
     role: 'Project Manager', 
     organisation: 'Africa Forward Advisory Group', 
     pays: '🇨🇮 Côte d\'Ivoire', 
-    photo: '/equipe/Anasthasie Affoué Estelle Kouakou.jpeg' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/Anasthasie-Affoué-Estelle-Kouakou.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'Mme Fatou Bintou', 
