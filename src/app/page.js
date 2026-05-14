@@ -36,22 +36,98 @@ const steps = [
   { num: '4', title: 'Certification', desc: 'Recevez votre certificat en fin de parcours selon les règles académiques applicables au programme.' },
 ]
 
-const getDriveUrl = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
-
 const equipe = [
-  { nom: 'Mme Oury KAMISSOKO', org: 'AJCAF-AS', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R'), logo: getDriveUrl('1GTmYgqeG70vTPzHov5VRGAAXjBl4G33A') },
-  { nom: 'Mme Djossa Esther', org: 'Benin Women Alumni Association', photo: getDriveUrl('1QVNG1t26D30dUHGSSnqhB72Wgi1kHuOh'), logo: getDriveUrl('1zukJrQBfMFs8kV7xtUXt0fpKOgfZSf25') },
-  { nom: 'M. Tonfack Armando', org: 'Le Centre ODAS', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7'), logo: getDriveUrl('1G9mQAok1IJ4zAm3ifpz42qzmVeliQpbE') },
-  { nom: 'Mme Kouakou Anasthasie Affoue Estelle', org: 'Africa Forward Advisory Group', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6'), logo: getDriveUrl('1UWgp3b45ADXFNQoBSfC9cJWoSGHX3ms0') },
-  { nom: 'Mme Fatou Bintou', org: 'Population Council', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4'), logo: getDriveUrl('1BIYIHl7DtBdywCwlvx241eouWyIIp1A6') },
-  { nom: 'M. Tanoh Noe', org: 'Le Centre ODAS', photo: getDriveUrl('1xRd9eIHjNEgM20D5da1TkT9hMBcoJVDy'), logo: getDriveUrl('1MnOy0cWxrPtDzWpfBjriiwEBkiRM0vD5') },
-  { nom: 'Dr Ramatou Ouedraogo', org: 'APHRC', photo: getDriveUrl('1EO9BKtOm3cx3HQ9VY1cEeXChJ8UVIjtg'), logo: getDriveUrl('1yP-SDg2brPcG60wkmZdOkk9FQ9tJKIVZ') },
-  { nom: 'Mme Deneo Désirée', org: 'Ligue Ivoirienne des Droits des Femmes', photo: getDriveUrl('1GACNrStBPZ9ASw8opmSX87K1lFAATtqI'), logo: getDriveUrl('1i5Wb1WtZQpqHlW0ZtiJ2I164Ym1E6O-v') },
-  { nom: 'M. Noel ADANLAO', org: 'Le Centre ODAS', photo: getDriveUrl('1zfvZLhRNAADnMsUPYvdODDDYP-x4i8UE'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
-  { nom: 'Mme Reine Stéphanie THIOMBIANO', org: 'Le Centre ODAS', photo: getDriveUrl('1AZT-GTYc26xl3m8HYFWLd4ZT20fb4RUE'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
-  { nom: 'Dr Beniel AGOSSOU', org: 'Le Centre ODAS', photo: getDriveUrl('1PpnL3uIyP536QyE6GPupSb-ckeZH2ILW'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
-  { nom: 'M. Karna KONE', org: 'Le Centre ODAS', photo: getDriveUrl('1Nnbe2n8e7RFwPa3DPD2O4oQWiw8kRPkf'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
-  { nom: 'Dr Dela Nai', org: 'Ibis Reproductive Health', photo: getDriveUrl('1xblYmDQg7Osq_AFJTLAvY1XikYwe5QU_'), logo: getDriveUrl('1FLDpaMoYrh38FEsxuhfpdN7vuii_MKvi') }
+   { 
+    nom: 'Mme Oury KAMISSOKO', 
+    role: 'Membre du Sous Comité Suivi', 
+    organisation: 'AJCAF-AS', 
+    pays: '🇲🇱 Mali', 
+    photo: '/equipe/Oury Kamissoko.jpg' // ← à vérifier, ce fichier n'est pas visible dans les screenshots
+  },
+  { 
+    nom: 'Mme Djossa Esther', 
+    role: 'Doctorante', 
+    organisation: 'Benin Women Alumni Association', 
+    pays: '🇧🇯 Bénin', 
+    photo: '/equipe/_DSC0204 (1) - esther DJOSSA.JPG' 
+  },
+  { 
+    nom: 'M. Tonfack Armando', 
+    role: 'MEAL Advisor', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇨🇲 Cameroun', 
+    photo: '/equipe/Armando TONFACKArmanoTONFACK.JPG' // ← vérifiez le nom exact complet
+  },
+  { 
+    nom: 'Mme Kouakou Anasthasie Affoue Estelle', 
+    role: 'Project Manager', 
+    organisation: 'Africa Forward Advisory Group', 
+    pays: '🇨🇮 Côte d\'Ivoire', 
+    photo: '/equipe/Anasthasie-Affoué-Estelle-Kouakou.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Mme Fatou Bintou', 
+    role: 'Représentante Pays', 
+    organisation: 'Population Council', 
+    pays: '🇸🇳 Sénégal', 
+    photo: '/equipe/FatouBintouMbow.png'// ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'M. Tanoh Noe', 
+    role: 'Assistant MEAL', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇨🇮 Côte d\'Ivoire', 
+    photo: '/equipe/photo - Noe Tanoh.png' 
+  },
+  { 
+    nom: 'Dr Ramatou Ouedraogo', 
+    role: 'Chercheure', 
+    organisation: 'APHRC', 
+    pays: '🇰🇪 Kenya', 
+    photo: '/equipe/RamatouOuedraogo.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Mme Deneo Désirée', 
+    role: 'Doctorante', 
+    organisation: 'Ligue Ivoirienne des Droits des Femmes', 
+    pays: '🇨🇦 Canada', 
+    photo: '/equipe/DésiréeDeneoDésiréeDeneo.JPG' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'M. Noel ADANLAO', 
+    role: 'Chargé de Communication', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇧🇯 Bénin', 
+    photo: '/equipe/NoelAdanlaophoto.png' 
+  },
+  { 
+    nom: 'Mme Reine Stéphanie THIOMBIANO', 
+    role: 'Chargé de l\'engagement', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '/equipe/ReineThiombiano.png' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Dr Beniel AGOSSOU', 
+    role: 'Conseiller Technique', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '/equipe/beniel-agossou.png' 
+  },
+  { 
+    nom: 'M. Karna KONE', 
+    role: 'Chargé de Communication', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '/equipe/KarnaKone.png'
+  },
+  { 
+    nom: 'Dr Dela Nai', 
+    role: 'Experte DSSR', 
+    organisation: 'Ibis Reproductive Health', 
+    pays: '🌍 Afrique', 
+    photo: '/equipe/Dela Nai Bio Photo_IbisRH - Dela Nai.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
 ]
 
 const temoignages = [
