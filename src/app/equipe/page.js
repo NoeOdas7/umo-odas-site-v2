@@ -40,7 +40,7 @@ const equipe = [
     role: 'MEAL Advisor', 
     organisation: 'Le Centre ODAS', 
     pays: '🇨🇲 Cameroun', 
-    photo: '/equipe/Profil Armando TONFACK - Armando TONFACK.png' // ← vérifiez le nom exact complet
+    photo: '/equipe/profil Armando TONFACK-Armando TONFACK.png' // ← vérifiez le nom exact complet
   },
   { 
     nom: 'Mme Kouakou Anasthasie Affoue Estelle', 
@@ -54,7 +54,7 @@ const equipe = [
     role: 'Représentante Pays', 
     organisation: 'Population Council', 
     pays: '🇸🇳 Sénégal', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/FatouBintouMbow.png'// ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'M. Tanoh Noe', 
@@ -68,28 +68,28 @@ const equipe = [
     role: 'Chercheure', 
     organisation: 'APHRC', 
     pays: '🇰🇪 Kenya', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/RamatouOuedraogo.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'Mme Deneo Désirée', 
     role: 'Doctorante', 
     organisation: 'Ligue Ivoirienne des Droits des Femmes', 
     pays: '🇨🇦 Canada', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/DésiréeDeneoDésiréeDeneo.JPG' // ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'M. Noel ADANLAO', 
     role: 'Chargé de Communication', 
     organisation: 'Le Centre ODAS', 
     pays: '🇧🇯 Bénin', 
-    photo: '/equipe/Noël-Adanlao.png' 
+    photo: '/equipe/NoelAdanlaophoto.png' 
   },
   { 
     nom: 'Mme Reine Stéphanie THIOMBIANO', 
     role: 'Chargé de l\'engagement', 
     organisation: 'Le Centre ODAS', 
     pays: '🌍 Afrique', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/ReineThiombiano.png' // ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'Dr Beniel AGOSSOU', 
@@ -103,7 +103,7 @@ const equipe = [
     role: 'Chargé de Communication', 
     organisation: 'Le Centre ODAS', 
     pays: '🌍 Afrique', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/karnaone.png'
   },
   { 
     nom: 'Dr Dela Nai', 
