@@ -37,7 +37,6 @@ const steps = [
 ]
 
 const equipe = [
- const equipe = [
   { nom: 'Mme Oury KAMISSOKO',                   role: 'Membre du Sous Comité Suivi',    organisation: 'AJCAF-AS',                           pays: '🇲🇱 Mali',          photo: '/equipe/Oury Kamissoko.jpg',            logo: '/logos/ajcaf-as.png' },
   { nom: 'Mme Djossa Esther',                     role: 'Doctorante',                      organisation: 'Benin Women Alumni Association',      pays: '🇧🇯 Bénin',         photo: '/equipe/_DSC0204 (1) - esther DJOSSA.JPG', logo: '/logos/benin-women-alumni.png' },
   { nom: 'M. Tonfack Armando',                    role: 'MEAL Advisor',                    organisation: 'Le Centre ODAS',                     pays: '🇨🇲 Cameroun',      photo: '/equipe/Armando TONFACKArmanoTONFACK.JPG', logo: '/logos/odas.png' },
@@ -51,7 +50,6 @@ const equipe = [
   { nom: 'Dr Beniel AGOSSOU',                     role: 'Conseiller Technique',            organisation: 'Le Centre ODAS',                     pays: '🌍 Afrique',         photo: '/equipe/beniel-agossou.png',            logo: '/logos/odas.png' },
   { nom: 'M. Karna KONE',                         role: 'Chargé de Communication',         organisation: 'Le Centre ODAS',                     pays: '🌍 Afrique',         photo: '/equipe/KarnaKone.png',                 logo: '/logos/odas.png' },
   { nom: 'Dr Dela Nai',                           role: 'Experte DSSR',                    organisation: 'Ibis Reproductive Health',            pays: '🌍 Afrique',         photo: '/equipe/Dela Nai Bio Photo_IbisRH - Dela Nai.jpg', logo: '/logos/ibis.png' },
-]
 ]
 
 const temoignages = [
