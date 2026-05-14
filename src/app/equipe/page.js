@@ -40,14 +40,14 @@ const equipe = [
     role: 'MEAL Advisor', 
     organisation: 'Le Centre ODAS', 
     pays: '🇨🇲 Cameroun', 
-    photo: '/equipe/profil Armando TONFACK-Armando TONFACK.png' // ← vérifiez le nom exact complet
+    photo: '/equipe/Armando TONFACKArmandoTONFACK.JPG' // ← vérifiez le nom exact complet
   },
   { 
     nom: 'Mme Kouakou Anasthasie Affoue Estelle', 
     role: 'Project Manager', 
     organisation: 'Africa Forward Advisory Group', 
     pays: '🇨🇮 Côte d\'Ivoire', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/Anasthasie Affoué Estelle Kouakou.jpeg' // ← aucune photo correspondante trouvée → affiche les initiales
   },
   { 
     nom: 'Mme Fatou Bintou', 
@@ -103,14 +103,14 @@ const equipe = [
     role: 'Chargé de Communication', 
     organisation: 'Le Centre ODAS', 
     pays: '🌍 Afrique', 
-    photo: '/equipe/karnaone.png'
+    photo: '/equipe/karnakone.png'
   },
   { 
     nom: 'Dr Dela Nai', 
     role: 'Experte DSSR', 
     organisation: 'Ibis Reproductive Health', 
     pays: '🌍 Afrique', 
-    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/Dela Nai Bio Photo_lbisRH-Dela Nai.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
   },
 ]
 /* ── Carte membre animée ── */
