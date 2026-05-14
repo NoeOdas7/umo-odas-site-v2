@@ -22,7 +22,7 @@ function useInView(threshold = 0.1) {
 /* ── Données équipe ── */
 const equipe = [
   { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali',  photo:'/equipe/oury.jpg'},
-  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo:'/equipe/_DSC0204(1)-ester DJOSSA.jpg'  },
+  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo:'/equipe/'  },
   { nom: 'M. Tonfack Armando', role: 'MEAL Advisor', organisation: 'Le Centre ODAS', pays: '🇨🇲 Cameroun', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7') },
   { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager', organisation: 'Africa Forward Advisory Group', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6') },
   { nom: 'Mme Fatou Bintou', role: 'Représentante Pays', organisation: 'Population Council', pays: '🇸🇳 Sénégal', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4') },
