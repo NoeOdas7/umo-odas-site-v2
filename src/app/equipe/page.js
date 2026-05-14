@@ -20,17 +20,22 @@ function useInView(threshold = 0.1) {
 }
 
 /* ── Données équipe ── */
+const getDriveUrl = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
+
 const equipe = [
-  { nom: 'Dr. Béniel Agossou',       role: 'Directeur',                   organisation: 'Le Centre ODAS',                          pays: '🌍 Afrique',       photo: '/equipe/beniel-agossou.png',    categorie: 'odas' },
-  { nom: 'M. Noël Adanlao',          role: 'Coordinateur de programme',   organisation: 'Le Centre ODAS',                          pays: '🌍 Afrique',       photo: '/equipe/noel-adanlao.jpg',      categorie: 'odas' },
-  { nom: 'Dr. Ginette Hounkanrin',   role: 'Facilitatrice',               organisation: 'Pathfinder International',                pays: '🇧🇫 Burkina Faso', photo: '/equipe/ginette-hounkanrin.png', categorie: 'facilitation' },
-  { nom: 'Mme Cécile Yougbaré',      role: 'Facilitatrice',               organisation: 'Médecins du Monde',                      pays: '🇫🇷 France',       photo: '/equipe/cecile-yougbare.png',   categorie: 'facilitation' },
-  { nom: 'Mme Moinsalima Hassane',   role: 'Facilitatrice',               organisation: 'ANJSR',                                  pays: '🇸🇳 Sénégal',      photo: '/equipe/moinsalima-hassane.png', categorie: 'facilitation' },
-  { nom: 'Dr. Melchie Ibula Bwanga', role: 'Facilitatrice',               organisation: 'AJCAF-AS',                               pays: '🌍 Afrique',       photo: '/equipe/melchie-ibula.png',     categorie: 'facilitation' },
-  { nom: 'Saskia Hüsken',            role: 'Facilitatrice',               organisation: 'Rutgers International',                  pays: '🇳🇱 Pays-Bas',     photo: '/equipe/saskia-husken.png',     categorie: 'facilitation' },
-  { nom: 'Souwaiba Ibrahim',         role: 'Facilitatrice',               organisation: 'Ligue Nigérienne des Droits des Femmes', pays: '🇳🇪 Niger',        photo: '/equipe/souwaiba-ibrahim.png',  categorie: 'facilitation' },
-  { nom: 'Dr. Raqibat Idris',        role: 'Éditrice',                    organisation: 'GFMER',                                  pays: '🌍 Afrique',       photo: '/equipe/raqibat-idris.png',     categorie: 'edition' },
-  { nom: 'Prof. Aldo Campana',       role: 'Éditeur',                     organisation: 'GFMER',                                  pays: '🇨🇭 Suisse',       photo: '/equipe/aldo-campana.png',      categorie: 'edition' },
+  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R') },
+  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo: getDriveUrl('1QVNG1t26D30dUHGSSnqhB72Wgi1kHuOh') },
+  { nom: 'M. Tonfack Armando', role: 'MEAL Advisor', organisation: 'Le Centre ODAS', pays: '🇨🇲 Cameroun', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7') },
+  { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager', organisation: 'Africa Forward Advisory Group', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6') },
+  { nom: 'Mme Fatou Bintou', role: 'Représentante Pays', organisation: 'Population Council', pays: '🇸🇳 Sénégal', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4') },
+  { nom: 'M. Tanoh Noe', role: 'Assistant MEAL', organisation: 'Le Centre ODAS', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1xRd9eIHjNEgM20D5da1TkT9hMBcoJVDy') },
+  { nom: 'Dr Ramatou Ouedraogo', role: 'Chercheure', organisation: 'APHRC', pays: '🇰🇪 Kenya', photo: getDriveUrl('1EO9BKtOm3cx3HQ9VY1cEeXChJ8UVIjtg') },
+  { nom: 'Mme Deneo Désirée', role: 'Doctorante', organisation: 'Ligue Ivoirienne des Droits des Femmes', pays: '🇨🇦 Canada', photo: getDriveUrl('1GACNrStBPZ9ASw8opmSX87K1lFAATtqI') },
+  { nom: 'M. Noel ADANLAO', role: 'Chargé de Communication', organisation: 'Le Centre ODAS', pays: '🇧🇯 Bénin', photo: getDriveUrl('1zfvZLhRNAADnMsUPYvdODDDYP-x4i8UE') },
+  { nom: 'Mme Reine Stéphanie THIOMBIANO', role: 'Chargé de l\'engagement', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1AZT-GTYc26xl3m8HYFWLd4ZT20fb4RUE') },
+  { nom: 'Dr Beniel AGOSSOU', role: 'Conseiller Technique', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1PpnL3uIyP536QyE6GPupSb-ckeZH2ILW') },
+  { nom: 'M. Karna KONE', role: 'Chargé de Communication', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1Nnbe2n8e7RFwPa3DPD2O4oQWiw8kRPkf') },
+  { nom: 'Dr Dela Nai', role: 'Experte DSSR', organisation: 'Ibis Reproductive Health', pays: '🌍 Afrique', photo: getDriveUrl('1xblYmDQg7Osq_AFJTLAvY1XikYwe5QU_') }
 ]
 
 /* ── Carte membre animée ── */
@@ -125,9 +130,7 @@ export default function EquipePage() {
   const [heroVisible, setHeroVisible] = useState(false)
   useEffect(() => { setTimeout(() => setHeroVisible(true), 80) }, [])
 
-  const equipeOdas    = equipe.filter(m => m.categorie === 'odas')
-  const facilitateurs = equipe.filter(m => m.categorie === 'facilitation')
-  const editeurs      = equipe.filter(m => m.categorie === 'edition')
+
 
   return (
     <>
@@ -155,8 +158,10 @@ export default function EquipePage() {
           <div className="absolute top-14 right-1/3 select-none font-black text-white/8" style={{ fontSize: '110px' }}>♀</div>
           <div className={`absolute top-36 left-1/3 transition-all duration-1000 delay-500 ${heroVisible ? 'opacity-25' : 'opacity-0'}`}
             style={{ animation: heroVisible ? 'floatSlow 8s ease-in-out infinite' : 'none' }}>
-            <div style={{ width: '28px', height: '28px', background: '#ecc92f',
-              clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)' }} />
+            <div style={{
+              width: '28px', height: '28px', background: '#ecc92f',
+              clipPath: 'polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)'
+            }} />
           </div>
           <div className="absolute bottom-0 right-0 opacity-15 pointer-events-none">
             <Image src="/pictos/picto-03.png" alt="" width={180} height={220} className="object-contain" />
@@ -174,7 +179,7 @@ export default function EquipePage() {
             <span style={{ color: '#ecc92f' }}>de votre formation</span>
           </h1>
           <p className="text-white/75 text-lg max-w-xl mx-auto leading-relaxed">
-            Facilitatrices, coordinateurs et éditeurs engagés pour la formation militante sur l&apos;avortement sécurisé en Afrique.
+            Membres du Comité Technique engagés pour la formation militante sur l&apos;avortement sécurisé en Afrique.
           </p>
 
           {/* Stats */}
@@ -205,19 +210,9 @@ export default function EquipePage() {
       <section className="py-16 bg-white">
         <div className="section-container">
 
-          <SectionHeader color="#ecc92f" label="Équipe Centre ODAS" icon="/pictos/picto-05.png" />
+          <SectionHeader color="#ecc92f" label="Membres du COTECH" icon="/pictos/picto-05.png" />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {equipeOdas.map((m, i) => <MembreCard key={i} membre={m} delay={i * 100} />)}
-          </div>
-
-          <SectionHeader color="#622ed1" label="Facilitatrices" icon="/pictos/picto-04.png" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {facilitateurs.map((m, i) => <MembreCard key={i} membre={m} delay={i * 80} />)}
-          </div>
-
-          <SectionHeader color="#34b7ad" label="Éditeurs scientifiques" icon="/pictos/picto-07.png" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {editeurs.map((m, i) => <MembreCard key={i} membre={m} delay={i * 100} />)}
+            {equipe.map((m, i) => <MembreCard key={i} membre={m} delay={i * 100} />)}
           </div>
 
         </div>
@@ -229,29 +224,7 @@ export default function EquipePage() {
           className="w-full object-cover" style={{ height: '42px', objectPosition: 'center' }} unoptimized />
       </div>
 
-      {/* ══ CTA ══ */}
-      <section className="py-14 md:py-20 bg-white text-center relative overflow-hidden">
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none animate-float-slow">
-          <Image src="/pictos/picto-05.png" alt="" width={55} height={55} className="object-contain" />
-        </div>
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none animate-float">
-          <Image src="/pictos/picto-07.png" alt="" width={55} height={55} className="object-contain" />
-        </div>
-        <div className="section-container fade-up">
-          <h2 className="font-heading font-black mb-3"
-            style={{ fontSize: 'clamp(1.8rem,4vw,2.8rem)', lineHeight: 1.15, color: '#622ed1' }}>
-            Vous aussi, rejoignez<br />l&apos;aventure
-          </h2>
-          <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto">
-            Postulez à la Cohorte 3 et apprenez aux côtés de ces expert·es engagé·es.
-          </p>
-          <Link href="/candidature"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-heading font-bold text-base transition-all duration-300 hover:-translate-y-1"
-            style={{ background: '#ecc92f', color: '#321b45', boxShadow: '0 6px 20px rgba(236,201,47,.4)' }}>
-            Candidatez ——→
-          </Link>
-        </div>
-      </section>
+
     </>
   )
 }
