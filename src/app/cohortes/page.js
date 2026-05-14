@@ -10,7 +10,7 @@ import { useAuth } from '@/lib/auth-context'
 const cohortes = [
   {
     num: 2,
-    annee: '2026',
+    annee: '2025',
     titre: "Recherche et Gestion des Connaissances sur l'Avortement Sécurisé",
     desc: "La cohorte 2 adopte une approche centrée sur l'utilisateur.rice, inclusive, intersectionnelle et académique.",
     bg: '#34b7ad',
@@ -123,12 +123,12 @@ function NotConnectedView() {
                 <div className="text-center px-6">
                   <div className="font-heading font-black text-white/90 leading-tight"
                     style={{ fontSize: 'clamp(1.5rem,4vw,2.2rem)', letterSpacing: '-0.02em', lineHeight: '1.2' }}>
-                    2ème Cohorte<br />2026
+                    2ème Cohorte<br />2025
                   </div>
                 </div>
               </div>
               <div className="p-5">
-                <p className="text-white/60 text-xs font-heading font-bold mb-1">2ème Cohorte — 2026</p>
+                <p className="text-white/60 text-xs font-heading font-bold mb-1">2ème Cohorte — 2025</p>
                 <h3 className="font-heading font-black text-white text-base mb-2 leading-tight">{cohortes[0].titre}</h3>
                 <p className="text-white/70 text-sm mb-5 leading-relaxed">{cohortes[0].desc}</p>
                 <Link href="/plateforme"
@@ -161,8 +161,11 @@ function NotConnectedView() {
                     En savoir plus <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                   <span className="text-xs font-heading font-bold text-umo-dark/50 px-3 py-1 rounded-full" style={{ background: 'rgba(50,27,69,0.1)' }}>
-                    Cohorte terminée
+                    Cohorte terminée - Bientôt disponible en Mooc
                   </span>
+                </div>
+                <div className="mt-4 p-3 rounded-xl bg-black/5 text-center">
+                  <p className="text-sm font-bold text-umo-dark">Le carrousel d'information cohorte 1</p>
                 </div>
               </div>
             </div>
@@ -304,28 +307,7 @@ function ConnectedView({ user }) {
           className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
       </div>
 
-      {/* CTA */}
-      <section className="bg-white py-14 text-center relative overflow-hidden">
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
-          <Image src="/pictos/picto-05.png" alt="" width={55} height={55} className="object-contain" />
-        </div>
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-25 pointer-events-none">
-          <Image src="/pictos/picto-07.png" alt="" width={50} height={50} className="object-contain" />
-        </div>
-        <div className="section-container">
-          <h2 className="font-heading font-black mb-3" style={{ fontSize: 'clamp(1.9rem,4vw,3rem)', lineHeight: 1.15, color: '#622ed1' }}>
-            Inscrivez-vous à<br />notre prochaine Cohorte
-          </h2>
-          <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto">
-            Les candidatures pour la cohorte 2 sont ouvertes jusqu&apos;à épuisement des places.
-          </p>
-          <Link href="/candidature"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-heading font-bold text-base transition-all duration-300 hover:-translate-y-1"
-            style={{ background: '#ecc92f', color: '#321b45', boxShadow: '0 6px 20px rgba(236,201,47,.4)' }}>
-            Candidatez ——→
-          </Link>
-        </div>
-      </section>
+
     </>
   )
 }
