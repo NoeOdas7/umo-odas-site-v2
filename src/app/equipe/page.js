@@ -40,7 +40,7 @@ const equipe = [
     role: 'MEAL Advisor', 
     organisation: 'Le Centre ODAS', 
     pays: '🇨🇲 Cameroun', 
-    photo: '/equipe/Armando TONFACKArmandoTONFACK.JPG' // ← vérifiez le nom exact complet
+    photo: '/equipe/Armando TONFACKArmanoTONFACK.JPG' // ← vérifiez le nom exact complet
   },
   { 
     nom: 'Mme Kouakou Anasthasie Affoue Estelle', 
@@ -110,7 +110,7 @@ const equipe = [
     role: 'Experte DSSR', 
     organisation: 'Ibis Reproductive Health', 
     pays: '🌍 Afrique', 
-    photo: '/equipe/Dela Nai Bio Photo_lbisRH-Dela Nai.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
+    photo: '/equipe/Dela Nai Bio Photo_IbisRH - Dela Nai.jpg' // ← aucune photo correspondante trouvée → affiche les initiales
   },
 ]
 /* ── Carte membre animée ── */
