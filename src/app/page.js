@@ -36,18 +36,22 @@ const steps = [
   { num: '4', title: 'Certification', desc: 'Recevez votre certificat en fin de parcours selon les règles académiques applicables au programme.' },
 ]
 
-const BASE = 'https://umo.centre-odas.org/wp-content/uploads/2025/05/'
+const getDriveUrl = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
+
 const equipe = [
-  { nom: 'Dr. Ginette Hounkanrin', org: 'Pathfinder International', photo: BASE + 'Photo_Ginette-1-2-819x1024.jpg' },
-  { nom: 'Mme Cécile Yougbaré', org: 'Médecins du Monde', photo: BASE + 'Photo-THIOMBIANO-_YOUGBARE-W.-Cecile-1-1024x919.jpg' },
-  { nom: 'Mme Moinsalima Hassane', org: 'ANJSR, Sénégal', photo: BASE + 'Moinsalima-Hassane-2-edited.jpg' },
-  { nom: 'Dr. Melchie Ibula Bwanga', org: 'AJCAF-AS', photo: BASE + 'Photo-3-683x1024.jpg' },
-  { nom: 'Saskia Hüsken', org: 'Rutgers International', photo: BASE + 'Saskia-Husken-profile-picture-1.jpg' },
-  { nom: 'Souwaiba Ibrahim', org: 'Ligue Nigérienne des Droits des Femmes', photo: BASE + 'Photo-Souwaiba-663x1024.jpg' },
-  { nom: 'Dr. Béniel Agossou', org: 'Le Centre ODAS', photo: BASE + 'Beniel-Agossou-2-1.png' },
-  { nom: 'M. Noël Adanlao', org: 'Le Centre ODAS', photo: BASE + 'Img-Noel-Adanlao-1024x1024.png' },
-  { nom: 'Dr. Raqibat Idris', org: 'GFMER', photo: BASE + 'RIdris-scaled.jpg' },
-  { nom: 'Prof. Aldo Campana', org: 'GFMER', photo: BASE + 'Campana.jpg' },
+  { nom: 'Mme Oury KAMISSOKO', org: 'AJCAF-AS', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R'), logo: getDriveUrl('1GTmYgqeG70vTPzHov5VRGAAXjBl4G33A') },
+  { nom: 'Mme Djossa Esther', org: 'Benin Women Alumni Association', photo: getDriveUrl('1QVNG1t26D30dUHGSSnqhB72Wgi1kHuOh'), logo: getDriveUrl('1zukJrQBfMFs8kV7xtUXt0fpKOgfZSf25') },
+  { nom: 'M. Tonfack Armando', org: 'Le Centre ODAS', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7'), logo: getDriveUrl('1G9mQAok1IJ4zAm3ifpz42qzmVeliQpbE') },
+  { nom: 'Mme Kouakou Anasthasie Affoue Estelle', org: 'Africa Forward Advisory Group', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6'), logo: getDriveUrl('1UWgp3b45ADXFNQoBSfC9cJWoSGHX3ms0') },
+  { nom: 'Mme Fatou Bintou', org: 'Population Council', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4'), logo: getDriveUrl('1BIYIHl7DtBdywCwlvx241eouWyIIp1A6') },
+  { nom: 'M. Tanoh Noe', org: 'Le Centre ODAS', photo: getDriveUrl('1xRd9eIHjNEgM20D5da1TkT9hMBcoJVDy'), logo: getDriveUrl('1MnOy0cWxrPtDzWpfBjriiwEBkiRM0vD5') },
+  { nom: 'Dr Ramatou Ouedraogo', org: 'APHRC', photo: getDriveUrl('1EO9BKtOm3cx3HQ9VY1cEeXChJ8UVIjtg'), logo: getDriveUrl('1yP-SDg2brPcG60wkmZdOkk9FQ9tJKIVZ') },
+  { nom: 'Mme Deneo Désirée', org: 'Ligue Ivoirienne des Droits des Femmes', photo: getDriveUrl('1GACNrStBPZ9ASw8opmSX87K1lFAATtqI'), logo: getDriveUrl('1i5Wb1WtZQpqHlW0ZtiJ2I164Ym1E6O-v') },
+  { nom: 'M. Noel ADANLAO', org: 'Le Centre ODAS', photo: getDriveUrl('1zfvZLhRNAADnMsUPYvdODDDYP-x4i8UE'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
+  { nom: 'Mme Reine Stéphanie THIOMBIANO', org: 'Le Centre ODAS', photo: getDriveUrl('1AZT-GTYc26xl3m8HYFWLd4ZT20fb4RUE'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
+  { nom: 'Dr Beniel AGOSSOU', org: 'Le Centre ODAS', photo: getDriveUrl('1PpnL3uIyP536QyE6GPupSb-ckeZH2ILW'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
+  { nom: 'M. Karna KONE', org: 'Le Centre ODAS', photo: getDriveUrl('1Nnbe2n8e7RFwPa3DPD2O4oQWiw8kRPkf'), logo: getDriveUrl('17sF9X_YtcFAiJ778cmMOmHypsE7jE4VQ') },
+  { nom: 'Dr Dela Nai', org: 'Ibis Reproductive Health', photo: getDriveUrl('1xblYmDQg7Osq_AFJTLAvY1XikYwe5QU_'), logo: getDriveUrl('1FLDpaMoYrh38FEsxuhfpdN7vuii_MKvi') }
 ]
 
 const temoignages = [
@@ -113,8 +117,8 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3 mb-6 lg:hidden">
                 {[
                   { val: '+200', lbl: 'Participants' },
-                  { val: '17', lbl: 'Pays engagés' },
-                  { val: '2', lbl: 'Cohortes' },
+                  { val: '8', lbl: 'Pays engagés' },
+                  { val: '3', lbl: 'Cohortes' },
                   { val: '100%', lbl: 'En ligne' },
                 ].map((s, i) => (
                   <div key={i} className="text-center px-4 py-2.5 rounded-2xl"
@@ -145,8 +149,8 @@ export default function HomePage() {
                 style={{ height: '6px', background: '#34b7ad', borderRadius: '4px', opacity: 0.7, zIndex: 3 }} />
               {[
                 { val: '+200', lbl: 'Participants', pos: { top: '6px', left: '0' } },
-                { val: '17', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
-                { val: '2', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
+                { val: '8', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
+                { val: '3', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
                 { val: '100%', lbl: 'En ligne', pos: { bottom: '60px', right: '0' } },
               ].map((s, i) => (
                 <div key={i} className="absolute text-center z-20 transition-all duration-500 hidden lg:block"
@@ -363,15 +367,17 @@ export default function HomePage() {
             <div className="mx-auto mb-4 w-4 h-4 rounded-sm opacity-45" style={{ background: '#622ed1', transform: 'rotate(12deg)' }} />
             <h2 className="font-heading font-black inline-block px-6 py-2 rounded-2xl"
               style={{ fontSize: 'clamp(2rem,4vw,3rem)', background: 'rgba(213,179,253,0.25)', color: '#622ed1' }}>
-              Nos partenaires
+              Membres du Cotech
             </h2>
-            <p className="text-gray-500 mt-4">Merci aux partenaires techniques et stratégiques qui accompagnent le programme.</p>
           </div>
           <div className={`transition-all duration-700 delay-200 ${partInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <Image
-              src="https://umo.centre-odas.org/wp-content/uploads/2025/05/PTS_all_Plan-de-travail-1-2048x784.png"
-              alt="Partenaires UMO ODAS" width={1200} height={460}
-              className="w-full object-contain" style={{ maxHeight: '300px' }} unoptimized />
+            <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              {[...new Set(equipe.map(m => m.logo))].filter(Boolean).map((logoUrl, i) => (
+                <div key={i} className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow" style={{ width: '160px', height: '100px' }}>
+                  <Image src={logoUrl} alt="Logo partenaire" width={120} height={80} className="max-w-full max-h-full object-contain" unoptimized />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
