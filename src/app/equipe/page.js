@@ -21,21 +21,98 @@ function useInView(threshold = 0.1) {
 
 /* ── Données équipe ── */
 const equipe = [
-  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali',  photo:'/equipe/oury.jpg'},
-  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo:'/equipe/oury'},
-  { nom: 'M. Tonfack Armando', role: 'MEAL Advisor', organisation: 'Le Centre ODAS', pays: '🇨🇲 Cameroun', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7') },
-  { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager', organisation: 'Africa Forward Advisory Group', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6') },
-  { nom: 'Mme Fatou Bintou', role: 'Représentante Pays', organisation: 'Population Council', pays: '🇸🇳 Sénégal', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4') },
-  { nom: 'M. Tanoh Noe', role: 'Assistant MEAL', organisation: 'Le Centre ODAS', pays: '🇨🇮 Côte d’Ivoire', photo:'/equipe/' },
-  { nom: 'Dr Ramatou Ouedraogo', role: 'Chercheure', organisation: 'APHRC', pays: '🇰🇪 Kenya', photo: getDriveUrl('1EO9BKtOm3cx3HQ9VY1cEeXChJ8UVIjtg') },
-  { nom: 'Mme Deneo Désirée', role: 'Doctorante', organisation: 'Ligue Ivoirienne des Droits des Femmes', pays: '🇨🇦 Canada', photo: getDriveUrl('1GACNrStBPZ9ASw8opmSX87K1lFAATtqI') },
-  { nom: 'M. Noel ADANLAO', role: 'Chargé de Communication', organisation: 'Le Centre ODAS', pays: '🇧🇯 Bénin', photo: getDriveUrl('1zfvZLhRNAADnMsUPYvdODDDYP-x4i8UE') },
-  { nom: 'Mme Reine Stéphanie THIOMBIANO', role: 'Chargé de l\'engagement', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1AZT-GTYc26xl3m8HYFWLd4ZT20fb4RUE') },
-  { nom: 'Dr Beniel AGOSSOU', role: 'Conseiller Technique', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1PpnL3uIyP536QyE6GPupSb-ckeZH2ILW') },
-  { nom: 'M. Karna KONE', role: 'Chargé de Communication', organisation: 'Le Centre ODAS', pays: '🌍 Afrique', photo: getDriveUrl('1Nnbe2n8e7RFwPa3DPD2O4oQWiw8kRPkf') },
-  { nom: 'Dr Dela Nai', role: 'Experte DSSR', organisation: 'Ibis Reproductive Health', pays: '🌍 Afrique', photo: getDriveUrl('1xblYmDQg7Osq_AFJTLAvY1XikYwe5QU_') }
+  { 
+    nom: 'Mme Oury KAMISSOKO', 
+    role: 'Membre du Sous Comité Suivi', 
+    organisation: 'AJCAF-AS', 
+    pays: '🇲🇱 Mali', 
+    photo: '/equipe/oury.jpg' // ← à vérifier, ce fichier n'est pas visible dans les screenshots
+  },
+  { 
+    nom: 'Mme Djossa Esther', 
+    role: 'Doctorante', 
+    organisation: 'Benin Women Alumni Association', 
+    pays: '🇧🇯 Bénin', 
+    photo: '/equipe/_DSC0204 (1) - esther DJOSSA.JPG' 
+  },
+  { 
+    nom: 'M. Tonfack Armando', 
+    role: 'MEAL Advisor', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇨🇲 Cameroun', 
+    photo: '/equipe/Profil Armando TONFACK - Armando TONFACK.png' // ← vérifiez le nom exact complet
+  },
+  { 
+    nom: 'Mme Kouakou Anasthasie Affoue Estelle', 
+    role: 'Project Manager', 
+    organisation: 'Africa Forward Advisory Group', 
+    pays: '🇨🇮 Côte d\'Ivoire', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Mme Fatou Bintou', 
+    role: 'Représentante Pays', 
+    organisation: 'Population Council', 
+    pays: '🇸🇳 Sénégal', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'M. Tanoh Noe', 
+    role: 'Assistant MEAL', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇨🇮 Côte d\'Ivoire', 
+    photo: '/equipe/photo - Noe Tanoh.png' 
+  },
+  { 
+    nom: 'Dr Ramatou Ouedraogo', 
+    role: 'Chercheure', 
+    organisation: 'APHRC', 
+    pays: '🇰🇪 Kenya', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Mme Deneo Désirée', 
+    role: 'Doctorante', 
+    organisation: 'Ligue Ivoirienne des Droits des Femmes', 
+    pays: '🇨🇦 Canada', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'M. Noel ADANLAO', 
+    role: 'Chargé de Communication', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🇧🇯 Bénin', 
+    photo: '/equipe/Noël-Adanlao.png' 
+  },
+  { 
+    nom: 'Mme Reine Stéphanie THIOMBIANO', 
+    role: 'Chargé de l\'engagement', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Dr Beniel AGOSSOU', 
+    role: 'Conseiller Technique', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '/equipe/beniel-agossou.png' 
+  },
+  { 
+    nom: 'M. Karna KONE', 
+    role: 'Chargé de Communication', 
+    organisation: 'Le Centre ODAS', 
+    pays: '🌍 Afrique', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
+  { 
+    nom: 'Dr Dela Nai', 
+    role: 'Experte DSSR', 
+    organisation: 'Ibis Reproductive Health', 
+    pays: '🌍 Afrique', 
+    photo: '' // ← aucune photo correspondante trouvée → affiche les initiales
+  },
 ]
-
 /* ── Carte membre animée ── */
 function MembreCard({ membre, delay = 0 }) {
   const [ref, inView] = useInView(0.08)
