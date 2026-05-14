@@ -11,7 +11,6 @@ const footerLinks = {
   ],
   Espace: [
     { label: 'Se connecter', href: '/plateforme' },
-    { label: 'Candidater', href: '/candidature' },
     { label: 'Ressources', href: '/ressources' },
     { label: 'FAQ', href: '/faq' },
   ],
@@ -30,16 +29,16 @@ export default function Footer() {
       <div className="section-container py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
-         <div className="lg:col-span-2">
-  <div className="flex items-center gap-4 mb-5">
-    <Image
-      src="/pictos/Logo_UMO_blanc.png"
-      alt="Logo UMO ODAS"
-      width={160}
-      height={120}
-      className="object-contain flex-shrink-0"
-    />
-  </div>  
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-4 mb-5">
+              <Image
+                src="/pictos/LogoUMO_UMO.png"
+                alt="Logo UMO ODAS"
+                width={70}
+                height={70}
+                className="object-contain flex-shrink-0"
+              />
+            </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4 max-w-xs">
               Un programme de renforcement de capacités 100% en ligne.
               Apprendre, échanger et agir ensemble pour l&apos;avortement sécurisé en Afrique.
@@ -75,7 +74,7 @@ export default function Footer() {
         </div>
       </div>
 
-     {/* ── Bande pictos bas ── */}
+      {/* ── Bande pictos bas ── */}
       <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
         <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
           className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
