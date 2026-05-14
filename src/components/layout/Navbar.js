@@ -108,9 +108,6 @@ export default function Navbar() {
                 <Link href="/plateforme" className="btn-connect text-xs px-5 py-2">
                   Se connecter
                 </Link>
-                <Link href="/candidature" className="btn-yellow-solid text-xs px-5 py-2">
-                  Candidatez →
-                </Link>
               </>
             )}
           </div>
@@ -162,8 +159,6 @@ export default function Navbar() {
                 <>
                   <Link href="/plateforme" onClick={() => setMenuOpen(false)}
                     className="btn-connect text-sm text-center mx-4">Se connecter</Link>
-                  <Link href="/candidature" onClick={() => setMenuOpen(false)}
-                    className="btn-yellow-solid text-sm text-center mx-4 mt-2">Candidatez →</Link>
                 </>
               )}
             </nav>
