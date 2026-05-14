@@ -26,7 +26,7 @@ const equipe = [
     role: 'Membre du Sous Comité Suivi', 
     organisation: 'AJCAF-AS', 
     pays: '🇲🇱 Mali', 
-    photo: '/equipe/oury.jpg' // ← à vérifier, ce fichier n'est pas visible dans les screenshots
+    photo: '/equipe/Oury Kamissoko.jpg' // ← à vérifier, ce fichier n'est pas visible dans les screenshots
   },
   { 
     nom: 'Mme Djossa Esther', 
