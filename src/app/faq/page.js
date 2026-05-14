@@ -5,21 +5,19 @@ import Link from 'next/link'
 
 const faqs = [
   { q: 'Qui peut postuler à l\'UMO ODAS ?',
-    a: 'Le programme est ouvert à toute personne engagée pour l\'avortement sécurisé en Afrique, que ce soit dans le milieu associatif, médical, juridique ou communautaire. Aucun diplôme spécifique n\'est requis.' },
-  { q: 'Le programme est-il gratuit ?',
-    a: 'Oui, la formation est entièrement gratuite pour les participant·es sélectionné·es. Les frais de connexion internet restent à votre charge.' },
+    a: 'Le programme est ouvert à tout jeune militant.e engagé.e pour l\'avortement sécurisé en Afrique, que ce soit dans le milieu associatif, médical, juridique ou communautaire.' },
   { q: 'Combien de temps dure le programme ?',
-    a: '3 mois, avec environ 5 à 8 heures de formation par semaine (modules en ligne + webinaires + coaching).' },
+    a: '2 à 3 mois voir plus (en fonction des cohortes), avec environ 5 à 8 heures de formation par semaine (modules en ligne + webinaires + coaching).' },
   { q: 'Faut-il un ordinateur pour participer ?',
-    a: 'Un smartphone suffit pour accéder à la plateforme Moodle. L\'application mobile Moodle est disponible gratuitement sur Android et iOS.' },
+    a: 'Pas nécessairement. Un smartphone suffit pour accéder à la plateforme Moodle. L\'application mobile Moodle est disponible gratuitement sur Android et iOS. Mais vous pouvez être plus à l\'aise sur une interface plus large comme votre ordinateur.' },
   { q: 'Comment se déroule le coaching ?',
-    a: 'Vous êtes affecté·e à un groupe de 10 personnes encadré par un·e coach. Le groupe se réunit virtuellement chaque semaine pour échanger sur les apprentissages et les projets.' },
+    a: 'Vous êtes affecté·e à un groupe de 5 voir 10 personnes encadrées par un·e coach. Vous avez la possibilité de vous connecter à votre coach ou à vos co-mentorés directement sur l\'onglet forum de Moodle.' },
   { q: 'Que se passe-t-il si je ne peux pas suivre un module à temps ?',
-    a: 'Les modules sont accessibles en ligne à votre propre rythme. Il y a des délais à respecter mais l\'équipe pédagogique fait preuve de flexibilité si vous communiquez vos contraintes à l\'avance.' },
+    a: 'Chaque modules est ouvert et accessible en ligne sur deux semaines. Vous pouvez allez à votre propre rythme. Il y a néanmoins des délais à respecter scrupuleusement.' },
   { q: 'Vais-je recevoir une attestation à la fin ?',
-    a: 'Oui ! Les participant·es qui complètent le parcours reçoivent une attestation officielle du Centre ODAS, ainsi que des badges numériques par module réussi.' },
+    a: 'Oui ! Les participant·es qui complètent le parcours reçoivent une attestation officielle ainsi que des badges numériques par module réussi.' },
   { q: 'Comment puis-je récupérer mes accès si je les ai perdus ?',
-    a: 'Utilisez la fonction "Mot de passe oublié" sur la plateforme Moodle. Si le problème persiste, contactez-nous à umo@centre-odas.io.' },
+    a: 'Utilisez la fonction "Mot de passe oublié" sur la plateforme Moodle. Si le problème persiste, contactez-nous à umo@centre-odas.io' }
 ]
 
 function FaqItem({ faq, index }) {
