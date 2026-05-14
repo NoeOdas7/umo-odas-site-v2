@@ -20,15 +20,13 @@ function useInView(threshold = 0.1) {
 }
 
 /* ── Données équipe ── */
-const getDriveUrl = (id) => `https://drive.google.com/uc?export=view&id=${id}`;
-
 const equipe = [
-  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali', photo: getDriveUrl('1AnfltfwiQ5e8CkTdKcYVTWh6YgHM7j1R') },
-  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo: getDriveUrl('1QVNG1t26D30dUHGSSnqhB72Wgi1kHuOh') },
+  { nom: 'Mme Oury KAMISSOKO', role: 'Membre du Sous Comité Suivi', organisation: 'AJCAF-AS', pays: '🇲🇱 Mali',  photo:'/equipe/oury.jpg'},
+  { nom: 'Mme Djossa Esther', role: 'Doctorante', organisation: 'Benin Women Alumni Association', pays: '🇧🇯 Bénin', photo:'/equipe/oury.jpg'  },
   { nom: 'M. Tonfack Armando', role: 'MEAL Advisor', organisation: 'Le Centre ODAS', pays: '🇨🇲 Cameroun', photo: getDriveUrl('1-EZxAMcBgwZoG8KUeBQa4XF6f3ZDiVj7') },
   { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager', organisation: 'Africa Forward Advisory Group', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1CBbGCqeAnxIZ81PjLn4Bm5fAK8_Jxps6') },
   { nom: 'Mme Fatou Bintou', role: 'Représentante Pays', organisation: 'Population Council', pays: '🇸🇳 Sénégal', photo: getDriveUrl('1dJvPTvUWZz6qrOB17Hka9EuAjLzhY8-4') },
-  { nom: 'M. Tanoh Noe', role: 'Assistant MEAL', organisation: 'Le Centre ODAS', pays: '🇨🇮 Côte d’Ivoire', photo: getDriveUrl('1xRd9eIHjNEgM20D5da1TkT9hMBcoJVDy') },
+  { nom: 'M. Tanoh Noe', role: 'Assistant MEAL', organisation: 'Le Centre ODAS', pays: '🇨🇮 Côte d’Ivoire', photo:'/equipe/ },
   { nom: 'Dr Ramatou Ouedraogo', role: 'Chercheure', organisation: 'APHRC', pays: '🇰🇪 Kenya', photo: getDriveUrl('1EO9BKtOm3cx3HQ9VY1cEeXChJ8UVIjtg') },
   { nom: 'Mme Deneo Désirée', role: 'Doctorante', organisation: 'Ligue Ivoirienne des Droits des Femmes', pays: '🇨🇦 Canada', photo: getDriveUrl('1GACNrStBPZ9ASw8opmSX87K1lFAATtqI') },
   { nom: 'M. Noel ADANLAO', role: 'Chargé de Communication', organisation: 'Le Centre ODAS', pays: '🇧🇯 Bénin', photo: getDriveUrl('1zfvZLhRNAADnMsUPYvdODDDYP-x4i8UE') },
