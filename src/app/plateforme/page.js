@@ -255,7 +255,7 @@ export default function PlatformePage() {
           <Link href="/candidature"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-heading font-bold text-base transition-all duration-300 hover:-translate-y-1"
             style={{ background: '#ecc92f', color: '#321b45', boxShadow: '0 6px 20px rgba(236,201,47,.4)' }}>
-            Candidatez ——→
+            Inscription ——→
           </Link>
         </div>
       </section>
