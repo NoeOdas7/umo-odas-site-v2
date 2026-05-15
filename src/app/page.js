@@ -115,8 +115,8 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3 mb-6 lg:hidden">
                 {[
                   { val: '+200', lbl: 'Participants' },
-                  { val: '8', lbl: 'Pays engagés' },
-                  { val: '3', lbl: 'Cohortes' },
+                  { val: '17', lbl: 'Pays engagés' },
+                  { val: '2', lbl: 'Cohortes' },
                   { val: '100%', lbl: 'En ligne' },
                 ].map((s, i) => (
                   <div key={i} className="text-center px-4 py-2.5 rounded-2xl"
