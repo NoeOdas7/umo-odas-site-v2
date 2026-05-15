@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-5">
               <Image
-                src="/pictos/LogoUMO_UMO.png"
+                src="/pictos/Logo_UMO_blanc.png"
                 alt="Logo UMO ODAS"
                 width={70}
                 height={70}
