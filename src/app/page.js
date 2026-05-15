@@ -39,7 +39,7 @@ const steps = [
 const equipe = [
   { nom: 'Mme Oury KAMISSOKO',                   role: 'Membre du Sous Comité Suivi',    organisation: 'AJCAF-AS',                           pays: '🇲🇱 Mali',          photo: '/equipe/Oury Kamissoko.jpg',            logo: '/partenaires/ajcaf-as.jpg' },
   { nom: 'Mme Djossa Esther',                     role: 'Doctorante',                      organisation: 'Benin Women Alumni Association',      pays: '🇧🇯 Bénin',         photo: '/equipe/_DSC0204 (1) - esther DJOSSA.JPG', logo: '/partenaires/bwaa.jpg' },
-  { nom: 'M. Tonfack Armando',                    role: 'MEAL Advisor',                    organisation: 'Le Centre ODAS',                     pays: '🇨🇲 Cameroun',      photo: '/equipe/Armando TONFACKArmanoTONFACK.JPG', logo: '/partenaire/logo-odas.png' },
+  { nom: 'M. Tonfack Armando',                    role: 'MEAL Advisor',                    organisation: 'Le Centre ODAS',                     pays: '🇨🇲 Cameroun',      photo: '/equipe/Armando TONFACKArmanoTONFACK.JPG', logo: '/partenaires/logo-odas.png' },
   { nom: 'Mme Kouakou Anasthasie Affoue Estelle', role: 'Project Manager',                 organisation: 'Africa Forward Advisory Group',      pays: '🇨🇮 Côte d\'Ivoire', photo: '/equipe/Anasthasie-Affoué-Estelle-Kouakou.jpg', logo: '/partenaires/afrique-avant.svg'}, 
   { nom: 'Mme Fatou Bintou',                      role: 'Représentante Pays',              organisation: 'Population Council',                 pays: '🇸🇳 Sénégal',       photo: '/equipe/FatouBintouMbow.png',          logo: '/partenaires/population-council.svg' },
   { nom: 'M. Tanoh Noe',                          role: 'Assistant MEAL',                  organisation: 'Le Centre ODAS',                     pays: '🇨🇮 Côte d\'Ivoire', photo: '/equipe/photo - Noe Tanoh.png',         logo: '/partenaires/logo-odas.png' },
@@ -49,7 +49,7 @@ const equipe = [
   { nom: 'Mme Reine Stéphanie THIOMBIANO',        role: 'Chargé de l\'engagement',         organisation: 'Le Centre ODAS',                     pays: '🌍 Afrique',         photo: '/equipe/ReineThiombiano.png',           logo: '/partenaires/logo-odas.png' },
   { nom: 'Dr Beniel AGOSSOU',                     role: 'Conseiller Technique',            organisation: 'Le Centre ODAS',                     pays: '🌍 Afrique',         photo: '/equipe/beniel-agossou.png',            logo: '/partenaires/logo-odas.png' },
   { nom: 'M. Karna KONE',                         role: 'Chargé de Communication',         organisation: 'Le Centre ODAS',                     pays: '🌍 Afrique',         photo: '/equipe/KarnaKone.png',                 logo: '/partenaires/logo-odas.png' },
-  { nom: 'Dr Dela Nai',                           role: 'Experte DSSR',                    organisation: 'Ibis Reproductive Health',            pays: '🌍 Afrique',         photo: '/equipe/Dela Nai Bio Photo_IbisRH - Dela Nai.jpg', logo: '/partenaires/ibis.png' },
+  { nom: 'Dr Dela Nai',                           role: 'Experte DSSR',                    organisation: 'Ibis Reproductive Health',            pays: '🌍 Afrique',         photo: '/equipe/Dela Nai Bio Photo_IbisRH - Dela Nai.jpg', logo: '/partenaires/logo_Ibis-logo.png' },
 ]
 
 const temoignages = [
