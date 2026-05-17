@@ -100,8 +100,8 @@ export default function PlatformePage() {
                 <div className="grid grid-cols-3 divide-x divide-white/10 border-b border-white/10">
                   {[
                     { icon: Users, val: '+200', label: 'Apprenantes' },
-                    { icon: BookOpen, val: '3', label: 'Cohortes' },
-                    { icon: Shield, val: '8', label: 'Pays' },
+                    { icon: BookOpen, val: '2', label: 'Cohortes' },
+                    { icon: Shield, val: '17', label: 'Pays' },
                   ].map(({ icon: Icon, val, label }, i) => (
                     <div key={i} className="py-4 text-center">
                       <div className="font-heading font-black text-xl" style={{ color: '#ecc92f' }}>{val}</div>
