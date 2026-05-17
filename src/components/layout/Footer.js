@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="space-y-1.5">
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <span className="text-umo-yellow">✉</span>
-                <span>umo@centre-odas.org</span>
+                <a href="mailto:umo@centre-odas.org" className="hover:text-white transition-colors duration-200">umo@centre-odas.org</a>
               </div>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <span className="text-umo-yellow">📍</span>
