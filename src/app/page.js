@@ -53,11 +53,13 @@ const equipe = [
 ]
 
 const temoignages = [
-  { name: 'Aminata K.', pays: '🇸🇳 Sénégal', text: "Cette formation a complètement transformé ma façon d'aborder le plaidoyer. Les échanges avec les autres participantes étaient incroyablement riches." },
-  { name: 'Grace O.', pays: '🇳🇬 Nigeria', text: "Le coaching en petits groupes est un vrai plus. Notre coach était disponible et vraiment à l'écoute. J'ai acquis des compétences concrètes." },
-  { name: 'Fatoumata D.', pays: '🇲🇱 Mali', text: "La plateforme est facile à utiliser même avec une connexion lente. J'ai pu suivre tous les modules depuis mon téléphone sans problème." },
-  { name: 'Aminata K.', pays: '🇸🇳 Sénégal', text: "Cette formation a complètement transformé ma façon d'aborder le plaidoyer. Les échanges avec les autres participantes étaient incroyablement riches." },
-  { name: 'Grace O.', pays: '🇳🇬 Nigeria', text: "Le coaching en petits groupes est un vrai plus. Notre coach était disponible et vraiment à l'écoute. J'ai acquis des compétences concrètes." },
+  { name: 'Fatimatou Diallo', pays: '🇬🇳 Guinée', text: "L’Université militante ODAS est un réel centre d’apprentissage, l’espace était ouvert à tout le monde et inclusif. Les webinaires, les discussions de groupes et l’accompagnement des coachs dans les différents groupes nous ont vraiment permis d’approfondir nos connaissances sur la question de l’avortement sécurisé. J’ai vraiment apprécié l’interaction entre participant(e)." },
+  { name: 'Asta Djossou', pays: '🇧🇯 Bénin', text: "La première cohorte de l’UMO était pour moi, une expérience vraiment unique et très enrichissante. Le programme me motive à m’investir plus pour l’accès à l’avortement sécurisé et d’avoir les outils nécessaires pour pouvoir aller sur le terrain. Le programme est une opportunité avec laquelle il ne faut pas s’amuser." },
+  { name: 'Joseph Olujobi', pays: '🇧🇯 Bénin', text: "Ma passion est de transformer les données probantes en recommandations opérationnelles pour les politiques publiques. Après ma participation à la cohorte 1 du programme, je ferai des recherches et je contribuerai à la littérature. Grâce à cette formation je finaliserai mon article scientifique sur l’avortement. Je peux dire que de chercheur généralisé, je suis passé à expert DSSR." },
+  { name: 'Cécile Y. Thiombiano', pays: '🇧🇫 Burkina Faso', text: "En tant que membre du Comité Technique, nous avons produits des modules de qualité qui sont aujourd’hui une base de données pour tous les acteurs du Mouvement, les universités et personnes engagées pour l’autonomie corporelle. Entre autres succès dont je suis fière, il y a la mobilisation des volontaires, l’engagement des jeunes participant(e)s, l’engagement des partenaires techniques et stratégiques." },
+  { name: 'Melchie Ibula', pays: '🇨🇩 RDC', text: "Les prochaines cohorte seront vraiment magnifique parce que ce n’était que le début. On déployé la première cohorte, nous avons eu les résultats et c’est sur ce modèle que les prochaines cohortes seront basées en prenant en compte les recommandations et les défis de cette première cohorte réussie." },
+  { name: 'Prince Etchi', pays: '🇧🇯 Bénin', text: "Avec les participant-es, ça a été très passionnant. L’université militante ODAS est une bonne opportunité et chaque bénéficiaire doit se mettre en tête qu’un seul défi est à relever : se capaciter et se rendre disponible pour aller au delà. Faire le kilomètre de plus au delà des devoirs et du cours, ne pas s’attendre forcément à avoir un poste de responsabilité pour utiliser les outils que le programme donne." },
+  { name: 'Dr Denis Bognini', pays: '🇧🇫 Burkina Faso', text: "L’atelier de capitalisation de la première cohorte a réuni toutes les catégories d’acteurs impliqués dans la première cohorte de l’université. Il a permis de ressortir les points forts, de recenser ce qui n’a pas marché pour améliorer la cohorte 2 et les autres." },
 ]
 
 export default function HomePage() {
@@ -323,7 +325,7 @@ export default function HomePage() {
               Témoignages
             </h2>
             <p className="text-gray-500 text-base">
-              Des participantes de nos cohortes précédentes partagent leur expérience.
+              Des acteurs de nos cohortes précédentes partagent leurs expériences.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
