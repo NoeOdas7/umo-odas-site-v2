@@ -233,15 +233,8 @@ export default function CharteUMOPage() {
         </div>
       </section>
 
-      {/* Bande déco picto-10 */}
-      <div className="overflow-hidden bg-white py-3 border-y border-gray-100">
-        <Image src="/pictos/picto-10.png" alt="" width={1400} height={60}
-          className="w-full object-cover" style={{ height: '120px', objectPosition: 'center' }} unoptimized />
-      </div>
-      <div />
-
       {/* ══ IV DISPOSITIONS FINALES ══ */}
-      <section className="bg-white py-8">
+      <section className="bg-white pb-8 pt-4">
         <div ref={dispRef}
           className={`section-container max-w-3xl transition-all duration-700 ${dispInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="rounded-3xl overflow-hidden" style={{ border: '2px solid rgba(192,57,43,0.2)', boxShadow: '0 4px 24px rgba(192,57,43,0.08)' }}>
@@ -286,17 +279,20 @@ export default function CharteUMOPage() {
               </div>
               <h3 className="font-heading font-black text-white text-xl">Validation</h3>
             </div>
-            <p className="text-white text-sm leading-relaxed mb-5 relative z-10">
-              En suivant ce cours, je reconnais avoir pris connaissance des engagements qui y figurent
-              et m&apos;engage à les respecter pour garantir un espace sûr, sorore, féministe et respectueux
-              pour toutes les personnes impliquées dans l&apos;Université Militante ODAS.
-            </p>
-            <p className="text-white/85 text-xs relative z-10">
-              Pour tout signalement contacter le Centre ODAS à{' '}
-              <a href="mailto:communication@centre-odas.org" className="text-umo-yellow underline hover:text-white transition-colors">
-                communication@centre-odas.org
-              </a>
-            </p>
+            <div className="space-y-4">
+              <p className="text-white text-sm leading-relaxed relative z-10">
+                En suivant ce cours, je reconnais avoir pris connaissance des engagements qui y figurent et m&apos;engage à les respecter pour garantir un espace sûr, sorore, féministe et respectueux pour toutes les personnes impliquées dans l&apos;Université Militante ODAS.
+              </p>
+              <p className="text-white text-sm leading-relaxed relative z-10">
+                Je consens également à ce que les données et informations fournies dans le cadre de ma participation soient utilisées pour les besoins d&apos;organisation, de configuration et de communication liés au programme.
+              </p>
+              <p className="text-white/85 text-xs relative z-10">
+                Pour tout signalement, contacter le Centre ODAS :{' '}
+                <a href="mailto:umo@centre-odas.org" className="text-umo-yellow underline hover:text-white transition-colors">
+                  umo@centre-odas.org
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
