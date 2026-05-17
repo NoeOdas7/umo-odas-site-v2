@@ -301,13 +301,21 @@ export default function HomePage() {
             {equipe.map((m, i) => (
               <div key={i} className="text-center group transition-all duration-500"
                 style={{ transitionDelay: `${i * 70}ms`, opacity: eqInView ? 1 : 0, transform: eqInView ? 'translateY(0)' : 'translateY(20px)' }}>
-                <div className="mx-auto mb-3 overflow-hidden group-hover:scale-110 transition-transform duration-300"
-                  style={{ width: '120px', height: '120px', borderRadius: '50%', border: '4px solid #f0f0f0', boxShadow: '0 4px 14px rgba(0,0,0,.14)' }}>
-                  <Image src={m.photo} alt={m.nom} width={120} height={120}
-                    className="w-full h-full object-cover object-top" unoptimized />
+                <div className="mx-auto mb-4 overflow-hidden bg-gray-100"
+                  style={{ 
+                    width: '180px', 
+                    height: '230px', 
+                    borderRadius: '0 0 90px 90px',
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.08)'
+                  }}>
+                  <Image src={m.photo} alt={m.nom} width={180} height={230}
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" unoptimized />
                 </div>
-                <h3 className="font-heading font-bold text-xs leading-tight" style={{ color: '#622ed1' }}>{m.nom}</h3>
-                <p className="text-gray-500 text-xs mt-0.5 leading-snug">{m.org}</p>
+                <h3 className="font-heading font-black text-lg leading-tight mb-1 px-2" style={{ color: '#622ed1' }}>{m.nom}</h3>
+                <p className="text-sm mb-0.5" style={{ color: '#321b45' }}>{m.organisation}</p>
+                <p className="font-heading font-black text-base" style={{ color: '#321b45' }}>
+                  {m.pays.replace(/[\uD83C-\uDBFF\uDC00-\uDFFF]+|\u2600-\u27BF+/g, '').trim()}
+                </p>
               </div>
             ))}
           </div>
@@ -328,32 +336,43 @@ export default function HomePage() {
               Des acteurs de nos cohortes précédentes partagent leurs expériences.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-8">
-            {temoignages.map((t, i) => (
-              <div key={i} className="relative flex flex-col items-center transition-all duration-500"
-                style={{ transitionDelay: `${i * 100}ms`, opacity: temoInView ? 1 : 0, transform: temoInView ? 'translateY(0)' : 'translateY(30px)' }}>
-                <div className="relative w-full px-8 py-8 text-center"
-                  style={{
-                    background: '#ecc92f', borderRadius: '50%', minHeight: '220px',
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: '0 6px 20px rgba(236,201,47,.4)',
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-12 mb-16 px-4">
+            {temoignages.map((t, i) => {
+              const isEven = i % 2 === 0;
+              return (
+                <div key={i} className="relative flex flex-col items-center transition-all duration-500 w-full sm:w-[45%] lg:w-[30%]"
+                  style={{ 
+                    transitionDelay: `${i * 100}ms`, 
+                    opacity: temoInView ? 1 : 0, 
+                    transform: temoInView ? `translateY(${i % 2 !== 0 ? '40px' : '0px'})` : 'translateY(40px)',
+                    zIndex: temoignages.length - i
                   }}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span style={{ color: '#321b45', fontSize: '28px', fontWeight: '900', lineHeight: 1 }}>&ldquo;&ldquo;</span>
-                    <h4 className="font-heading font-black text-lg" style={{ color: '#321b45' }}>{t.name}</h4>
+                  <div className="relative w-full px-8 py-10 text-center flex flex-col items-center justify-center"
+                    style={{
+                      background: '#ecc92f', 
+                      borderRadius: '50%', 
+                      boxShadow: '0 8px 25px rgba(236,201,47,.3)',
+                    }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span style={{ color: '#321b45', fontSize: '32px', fontWeight: '900', fontStyle: 'italic', lineHeight: 0, position: 'relative', top: '6px' }}>&quot;</span>
+                      <h4 className="font-heading font-black text-xl leading-tight" style={{ color: '#321b45' }}>{t.name}</h4>
+                    </div>
+                    <p className="text-sm leading-relaxed max-w-[85%] mx-auto" style={{ color: '#321b45' }}>{t.text}</p>
+                    
+                    {/* Tail */}
+                    <div className="absolute" style={{
+                      bottom: '-22px', 
+                      left: isEven ? '35%' : '65%', 
+                      transform: 'translateX(-50%)',
+                      width: '0', height: '0',
+                      borderLeft: isEven ? '8px solid transparent' : '22px solid transparent',
+                      borderRight: isEven ? '22px solid transparent' : '8px solid transparent',
+                      borderTop: '24px solid #ecc92f',
+                    }} />
                   </div>
-                  <p className="text-sm leading-relaxed" style={{ color: '#321b45' }}>{t.text}</p>
-                  <p className="text-xs mt-3 font-heading font-semibold" style={{ color: 'rgba(50,27,69,.6)' }}>{t.pays}</p>
-                  <div className="absolute" style={{
-                    bottom: '-20px', left: '50%', transform: 'translateX(-50%)',
-                    width: '0', height: '0',
-                    borderLeft: '20px solid transparent',
-                    borderRight: '20px solid transparent',
-                    borderTop: '22px solid #ecc92f',
-                  }} />
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
