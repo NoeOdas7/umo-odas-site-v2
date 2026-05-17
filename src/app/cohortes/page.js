@@ -164,9 +164,9 @@ function NotConnectedView() {
                     Cohorte terminée - Bientôt disponible en Mooc
                   </span>
                 </div>
-                <div className="mt-4 p-3 rounded-xl bg-black/5 text-center">
+                <Link href="https://drive.google.com/file/d/1OOHbo78vzIXyAKyJwB3q_1nQoftMh5Kp/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" className="mt-4 block w-full p-3 rounded-xl bg-black/5 text-center hover:bg-black/10 transition-colors">
                   <p className="text-sm font-bold text-umo-dark">Le carrousel d'information cohorte 1</p>
-                </div>
+                </Link>
               </div>
             </div>
 
