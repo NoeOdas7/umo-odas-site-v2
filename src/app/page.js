@@ -29,6 +29,40 @@ function GenderDivider() {
   )
 }
 
+/* ── Animated Counter ── */
+function AnimatedCounter({ num, prefix = '', suffix = '', duration = 2500, start = false }) {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (start) {
+      let startTime = null
+      let animationFrame
+      const updateCounter = (timestamp) => {
+        if (!startTime) startTime = timestamp
+        const progress = timestamp - startTime
+        
+        // Easing ease-out-quad (plus doux au début que expo)
+        const timeFraction = Math.min(progress / duration, 1)
+        const easeOut = timeFraction * (2 - timeFraction)
+        
+        setCount(Math.floor(easeOut * num))
+
+        if (progress < duration) {
+          animationFrame = requestAnimationFrame(updateCounter)
+        } else {
+          setCount(num)
+        }
+      }
+      animationFrame = requestAnimationFrame(updateCounter)
+      return () => cancelAnimationFrame(animationFrame)
+    } else {
+      setCount(0)
+    }
+  }, [num, duration, start])
+
+  return <>{prefix}{count}{suffix}</>
+}
+
 const steps = [
   { num: '1', title: 'Candidature', desc: 'Manifestez votre volonté à rejoindre la Cohorte dès que le processus est lancé.' },
   { num: '2', title: 'Sélection', desc: 'Le comité évalue les dossiers et sélectionne les bénéficiaires suivant les critères définis.' },
@@ -116,14 +150,16 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-3 mb-6 lg:hidden">
                 {[
-                  { val: '+200', lbl: 'Participants' },
-                  { val: '17', lbl: 'Pays engagés' },
-                  { val: '2', lbl: 'Cohortes' },
-                  { val: '100%', lbl: 'En ligne' },
+                  { num: 200, prefix: '+', suffix: '', lbl: 'Participants' },
+                  { num: 17, prefix: '', suffix: '', lbl: 'Pays engagés' },
+                  { num: 2, prefix: '', suffix: '', lbl: 'Cohortes' },
+                  { num: 100, prefix: '', suffix: '%', lbl: 'En ligne' },
                 ].map((s, i) => (
                   <div key={i} className="text-center px-4 py-2.5 rounded-2xl"
                     style={{ background: 'rgba(213,179,253,0.5)', backdropFilter: 'blur(6px)' }}>
-                    <div className="font-heading font-black text-lg leading-none" style={{ color: '#622ed1' }}>{s.val}</div>
+                    <div className="font-heading font-black text-lg leading-none" style={{ color: '#622ed1' }}>
+                      <AnimatedCounter num={s.num} prefix={s.prefix} suffix={s.suffix} start={visible} />
+                    </div>
                     <div className="text-xs mt-0.5" style={{ color: '#622ed1' }}>{s.lbl}</div>
                   </div>
                 ))}
@@ -148,10 +184,10 @@ export default function HomePage() {
               <div className="absolute bottom-8 left-0 right-0 pointer-events-none"
                 style={{ height: '6px', background: '#34b7ad', borderRadius: '4px', opacity: 0.7, zIndex: 3 }} />
               {[
-                { val: '+200', lbl: 'Participants', pos: { top: '6px', left: '0' } },
-                { val: '17', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
-                { val: '2', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
-                { val: '100%', lbl: 'En ligne', pos: { bottom: '60px', right: '0' } },
+                { num: 200, prefix: '+', suffix: '', lbl: 'Participants', pos: { top: '6px', left: '0' } },
+                { num: 17, prefix: '', suffix: '', lbl: 'Pays\nEngagés', pos: { top: '6px', right: '0' } },
+                { num: 2, prefix: '', suffix: '', lbl: 'Cohortes\nréussies', pos: { top: '38%', left: '-10px' } },
+                { num: 100, prefix: '', suffix: '%', lbl: 'En ligne', pos: { bottom: '60px', right: '0' } },
               ].map((s, i) => (
                 <div key={i} className="absolute text-center z-20 transition-all duration-500 hidden lg:block"
                   style={{
@@ -160,7 +196,9 @@ export default function HomePage() {
                     opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(10px)',
                     transitionDelay: `${400 + i * 120}ms`
                   }}>
-                  <div className="font-heading font-black text-xl leading-none" style={{ color: '#622ed1' }}>{s.val}</div>
+                  <div className="font-heading font-black text-xl leading-none" style={{ color: '#622ed1' }}>
+                    <AnimatedCounter num={s.num} prefix={s.prefix} suffix={s.suffix} start={visible} />
+                  </div>
                   <div className="text-xs mt-0.5" style={{ color: '#622ed1', whiteSpace: 'pre-line' }}>{s.lbl}</div>
                 </div>
               ))}
